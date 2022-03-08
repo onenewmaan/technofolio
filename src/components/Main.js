@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import TopButton from "../subComponents/TopButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
-import { YinYang } from "./AllSvgs";
+import { WWW } from "./AllSvgs";
 import {motion} from 'framer-motion';
 import Intro from "./Intro";
 
@@ -72,14 +72,7 @@ color: ${props => props.theme.text};
 text-decoration: none;
 z-index: 1;
 `
-const rotate = keyframes`
-from{
-    transform: rotate(0);
-}
-to{
-    transform: rotate(360deg);
-}
-`
+
 const Center = styled.button`
 position: absolute;
 top: ${props => props.click ? '85%':'50%' };
@@ -95,7 +88,7 @@ justify-content: center;
 align-items: center;
 transition: all 1s ease;
 &>:first-child{
-    animation: ${rotate} infinite 1.5s linear;
+    padding-top: 1rem;
 }
 &>:last-child{
     display: ${props => props.click ? 'none' : 'inline-block'};
@@ -127,16 +120,25 @@ const Main = () => {
                 <SocialIcons theme={click ? 'dark' : 'light' } />
                 <DarkDiv click={click} />
                 <Center click={click}>
-                    <YinYang onClick={()=> handleClick()} height={click ? 100:200} width={click ? 100:200} fill='currentColor' />
+                    <WWW onClick={()=> handleClick()} height={click ? 100:200} width={click ? 100:200} fill='currentColor' />
                     <span>click</span>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
-                    <motion.h3
+                    <motion.h2
+                    initial={{
+                        y:-200,
+                        transition: { type:'spring', duration: 1.5, delay:1}
+                    }}
+                    animate={{
+                        y:0,
+                        transition: { type:'spring', duration: 1.5, delay:1}
+                    }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
+                    
                     >
-                        Say hi...
-                    </motion.h3>
+                        Say hi..
+                    </motion.h2>
                 </Contact>
                 <BLOG to="/blog">
                 <motion.h3

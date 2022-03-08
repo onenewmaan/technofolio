@@ -9,6 +9,7 @@ import AboutPage from './components/AboutPage';
 import BlogPage from './components/BlogPage';
 import WorkPage from './components/WorkPage';
 import SkillsPage from './components/SkillsPage';
+import SoundBar from "./subComponents/SoundBar";
 
 
 
@@ -17,13 +18,14 @@ function App() {
   return <>
     <GlobalStyle />
     <ThemeProvider theme={lightTheme}>
-    <Switch>
-      <Route exact path="/" component={Main} />
-      <Route exact path="/about" component={AboutPage} />
-      <Route exact path="/blog" component={BlogPage} />
-      <Route exact path="/work" component={WorkPage} />
-      <Route exact path="/" component={SkillsPage} />
-    </Switch>
+      <SoundBar />
+      <Switch>
+        <Route exact path="/" component={Main} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/blog" component={BlogPage} />
+        <Route exact path="/work" component={WorkPage} />
+        <Route exact path="/skills" component={SkillsPage} />
+      </Switch>
     </ThemeProvider>
     </>
     
