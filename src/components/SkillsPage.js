@@ -4,7 +4,6 @@ import { lightTheme } from './Themes';
 import {Design, Develope} from './AllSvgs';
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
-import TopButton from "../subComponents/TopButton";
 import ParticleComponent from "../subComponents/ParticleComponent";
 
 const Box = styled.div`
@@ -74,7 +73,6 @@ const SkillsPage = () => {
             <Box>
                 <LogoComponent theme='light' />
                 <SocialIcons theme='light' />
-                <TopButton theme='light' />
                 <ParticleComponent theme='light' />
                 <Main>
                     <Title>

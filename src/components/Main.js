@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from 'styled-components';
-import TopButton from "../subComponents/TopButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
-import { WWW } from "./AllSvgs";
 import {motion} from 'framer-motion';
-import Intro from "./Intro";
 
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
@@ -55,7 +52,7 @@ z-index: 1;
 `
 const BottomBar = styled.div`
 position: absolute;
-top: 2rem;
+top: 2.5rem;
 left: 0;
 right: 0;
 width: 100%;
@@ -87,30 +84,17 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 transition: all 1s ease;
-&>:first-child{
-    padding-top: 1rem;
-}
-&>:last-child{
-    display: ${props => props.click ? 'none' : 'inline-block'};
-    padding-top: 1rem;
-}
 `
 
 const Main = () => {
 
-    const [click, setClick] = useState(false);
-    const handleClick = () => setClick(!click);
-
     return (
         <MainContainer>
             <Container>
-                <TopButton />
                 <LogoComponent />
                 <SocialIcons />
-                <Center click={click}>
-                    <WWW onClick={()=> handleClick()} height={click ? 100:200} width={click ? 100:200} fill='currentColor' />
-                    <span>timeline</span>
-                    
+                <Center>
+                    <h1>hi, take a look around.</h1>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
@@ -142,16 +126,16 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        Work
+                        Projects
                     </motion.h3>
                 </WORK>
                 <BottomBar>
-                    <ABOUT to="/about">
+                    <ABOUT to="/cv">
                     <motion.h3
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                            About.
+                            CirriculumVitae
                         </motion.h3>
                     </ABOUT>
                     <SKILLS to="/skills">
@@ -164,7 +148,6 @@ const Main = () => {
                     </SKILLS>
                 </BottomBar>
             </Container>
-            {click ? <Intro click={click} /> : null }
         </MainContainer>
     )
 }

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
-import TopButton from "../subComponents/TopButton";
 import BlogComponent from "./BlogComponent";
 import { Blogs } from '../data/BlogData'
 
@@ -41,7 +40,6 @@ const BlogPage = () => {
         <MainContainer>
             <Container>
                 <LogoComponent />
-                <TopButton />
                 <SocialIcons />
                 <Center>
                     <Grid>
