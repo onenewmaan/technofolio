@@ -3,81 +3,97 @@ import styled from "styled-components";
 import {motion} from 'framer-motion';
 import Me from '../assets/Images/profile-img.png';
 
-const Box = styled(motion.div)`
-position: absolute;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
-width: 75vw;
-height: 35vh;
-display: flex;
 
-background: linear-gradient(
-    to right,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%) bottom,
-    linear-gradient(
-    to right,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%) top;
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-    border-left: 2px solid ${props => props.theme.body};
-    border-right: 2px solid ${props => props.theme.text};
-    z-index:1;
+const Box =  styled.div`
+  border: 2px solid ${(props) => props.theme.text};
+  border-radius: 5px;
+  color: ${(props) => props.theme.text};
+  padding: 2rem;
+  width: 50vw;
+  z-index: 3;
+  line-height: 1.5;
+  font-family: monospace;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(0.6rem + 1vw);
+  backdrop-filter: blur(4px);
+  left: 50%;
+  transform: translate(-50%, 0);
+  top: 6rem;
+  font-family: 'Ubuntu Mono', monospace;
+
 `
-const SubBox = styled.div`
-position: relative;
-width: 50%;
-display: flex;
-.pic{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    width: 100%;
-    height: auto;
-}
-`
-const Text = styled.div`
-font-size: calc(1em + 1.5vw);
-color: ${props => props.theme.body};
+const Main = styled.div`
+border: 2px solid ${props => props.theme.text};
+color: ${props => props.theme.text};
+background-color: ${props => props.theme.body};
 padding: 2rem;
+width: 30vw;
+height: 60vh;
+z-index: 3;
+line-height: 1.5;
 cursor: pointer;
+
+font-family: monospace;
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: space-between;
+&:hover{
+    color: ${props => props.theme.body};
+    background-color: ${props => props.theme.text};
+}
+`
+const Title = styled.h2`
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: calc(1em + 1vw);
+${Main}:hover &{
+    &>*{
+        fill:${props => props.theme.body};
+    }
+}
+&>*:first-child{
+    margin-right: 1rem;
+}
+`
+const Description = styled.h3`
+color: ${props => props.theme.text};
+font-size: calc(0.6em + 1vw);
+padding: 0.5rem 0;
+${Main}:hover &{
+    
+    color:${props => props.theme.body};
 
-&>*:last-child{
-    color: ${props => `rgba(${props.theme.bodyRgba}, 0.6)`}
-    font-size: calc(0.5rem + 1.5vw);
-    font-weight: 300;
+}
+strong{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+ul, p{
+    margin-left: 2rem;
 }
 `
 
+
 const Intro = () => {
+
     return (
         <Box
         initial={{height:0}}
         animate={{height:'55vh'}}
         transition={{type: 'spring', duration:2, delay:1 }}
         >
-            <SubBox>
-                <Text>
-                    <h1>Hi,</h1>
-                    <h3>Lorem Lipsum</h3>
-                    <h6>In lorem lipsum of the lorem liops </h6>
-                </Text>
-            </SubBox>
-            <SubBox>
-                <motion.div
-                initial={{opacity:0}}
-                animate={{opacity:1}}
-                transition={{duration:1, delay:2}}>
-
-                    <img className='pic' src={Me} alt="Profile Picture" />
-                </motion.div>
-            </SubBox>
+            <Title>
+                     Design
+                    </Title>
+                    <Description>
+                    I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
+                    </Description>
         </Box>
     )
 }

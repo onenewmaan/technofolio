@@ -55,7 +55,7 @@ z-index: 1;
 `
 const BottomBar = styled.div`
 position: absolute;
-bottom: 1rem;
+top: 2rem;
 left: 0;
 right: 0;
 width: 100%;
@@ -95,17 +95,6 @@ transition: all 1s ease;
     padding-top: 1rem;
 }
 `
-const DarkDiv = styled.div`
-position: absolute;
-top: 0;
-background-color: #000;
-bottom: 0;
-right: 50%;
-width: ${props => props.click ? '50%':'0%'};
-height: ${props => props.click ? '100%':'0%'};
-z-index: 1;
-transition: height 0.5s ease, width 1s ease 0.5s;
-`
 
 const Main = () => {
 
@@ -116,12 +105,12 @@ const Main = () => {
         <MainContainer>
             <Container>
                 <TopButton />
-                <LogoComponent theme={click ? 'dark' : 'light' } />
-                <SocialIcons theme={click ? 'dark' : 'light' } />
-                <DarkDiv click={click} />
+                <LogoComponent />
+                <SocialIcons />
                 <Center click={click}>
                     <WWW onClick={()=> handleClick()} height={click ? 100:200} width={click ? 100:200} fill='currentColor' />
-                    <span>click</span>
+                    <span>timeline</span>
+                    
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
