@@ -135,7 +135,7 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                            CirriculumVitae
+                            experience
                         </motion.h3>
                     </ABOUT>
                     <SKILLS to="/skills">
@@ -143,7 +143,7 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                            Skills.
+                            skills
                         </motion.h3>
                     </SKILLS>
                 </BottomBar>

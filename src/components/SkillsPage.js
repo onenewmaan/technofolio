@@ -20,8 +20,9 @@ border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
 background-color: ${props => props.theme.body};
 padding: 2rem;
-width: 30vw;
-height: 60vh;
+top: 150px;
+width: 70vw;
+height: fit-content;
 z-index: 3;
 line-height: 1.5;
 cursor: pointer;
@@ -29,6 +30,7 @@ cursor: pointer;
 font-family: monospace;
 display: flex;
 flex-direction: column;
+align-items: center;
 justify-content: space-between;
 &:hover{
     color: ${props => props.theme.body};
@@ -37,6 +39,7 @@ justify-content: space-between;
 `
 const Title = styled.h2`
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 font-size: calc(1em + 1vw);
@@ -49,7 +52,7 @@ ${Main}:hover &{
     margin-right: 1rem;
 }
 `
-const Description = styled.h3`
+const p = styled.h3`
 color: ${props => props.theme.text};
 font-size: calc(0.6em + 1vw);
 padding: 0.5rem 0;
@@ -75,41 +78,29 @@ const SkillsPage = () => {
                 <SocialIcons theme='light' />
                 <ParticleComponent theme='light' />
                 <Main>
-                    <Title>
-                        <Design width={40} height={40} /> Design
-                    </Title>
-                    <Description>
-                    I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-                    </Description>
-                    <Description>
-                    <strong>
-                    SKILL 
-                        </strong>
-                        <ul>
-                            <li>
-                                Design
-                            </li>
-                            <li>
-                                Web2 Web3
-                            </li>
-                        </ul>
-                    </Description>
-                </Main>
-                <Main>
-                    <Title>
-                        <Develope width={40} height={40} /> Design
-                    </Title>
-                    <Description>
-                    I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-                    </Description>
-                    <Description>
+                    <div className="mobile-shrink-2">
+                    <img src="img/dunningkruger.png" width="450px" height="350px"/>
+                    </div>
+                    <p>
+                    As a result of my education, research and work experience, and I've developed skills in a variety of fields stretching from electrical circuits,
+                        automation, data science to computer networks.
+                        My biggest skill is the ability to ask a lot of questions / promptly look up problems in search browsers.
+                        Stack Overflow was one of my most commonly visited websites in 2021.
+                        I enjoy experimenting in my lab with various IoT devices, electronics and software tools.
+                        Collecting, storing, visualizing data and attempts at finding valuable clues in the data, logs - I find very intriguing.
+                        Currently pursuing a personal projects in tensorflow object detection and taking a CISSP Certification course
+                        as I'd like to keep on broadening my knowledge in the fields of Cybersecurity and Data Engineering. 
+
+                    </p>
+                    <div className="bottom-space-sm" />
+                    <p>
                     <strong>
                     TOOLS
                         </strong>
                         <ul>
-                            <p>Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.</p>
+                            <p>Python, Linux, Bash, AWS, SQL, JS, GIT, NVIDIA, TCP/IP, OpenVPN, RS232/485, MODBUS</p>
                         </ul>
-                    </Description>
+                    </p>
                 </Main>
             </Box>
         </ThemeProvider>

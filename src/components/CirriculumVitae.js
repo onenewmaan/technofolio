@@ -99,7 +99,6 @@ const CirriculuVitae = () => {
             <p style={{ fontSize: '15px', lineHeight:'25px', textAlign:'end'}}>
                 Electrical engineer & electronics hobbyist made programmer and linux enthusiast
             </p>
-
             <div>
                 <div className='roadmap'>
                     <p style={{ fontSize: '15px', color:'#0027AD', lineHeight:'25px', textAlign:'end'}}>★ Outlaw Automation Inc. - System Integrator</p>
@@ -109,14 +108,14 @@ const CirriculuVitae = () => {
                         <div className='col'>
                             <p style={{fontSize: '13px', lineHeight:'18px', textAlign:'end'}}>
                             Deployment and management of cloud-hosted Linux SCADA servers, MySQL, MongoDB Databases. 
-                            Development of interactive HMI, XLM, HTML templates, python, JS modules that extend system functionality. 
-                            Secure VPN network deployment accross 300+ mobile endpoints. Password and Certificate Management. SSH Access control. 
+                            Development of interactive HMI, XML, HTML templates, python, JS modules that extend system functionality. 
+                            Secure VPN network deployment across 300+ mobile endpoints. Password and Certificate Management. SSH Access control. 
                             3D product design and print.
                             Direct product support - 24h on call rotations.  
                             </p>
                             <p style={{ fontSize: '10px', textAlign:'end'}}>TOOLS</p>
                             <p style={{fontSize: '10px', lineHeight:'18px', textAlign:'end'}}>
-                                Python, HMI, XML, HTML, css, JS, AWS, Linux(Debian, CentOS), OpenVPN, MODBUS, TCP/IP, GIT, MQQT
+                                Python, HMI, XML, HTML, css, JS, AWS, Linux, SQL, TCP/IP, OpenVPN, RS232/485, MODBUS, GIT, MQTT
                             </p>
                         
                         </div>
@@ -149,46 +148,25 @@ const CirriculuVitae = () => {
                         <div className='col'>
                             <div className="bottom-space-sm" />
                                     <p style={{fontSize: '13px', lineHeight:'18px', textAlign:'end'}}>
-                                    System testing, analysis and quality assurance. Indicance and bug reporting. Execute test plans, provide application instruction for users. 
+                                    System testing, analysis and quality assurance. Incidence and bug reporting. Execute test plans, provide application instruction for users. 
                                     </p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='roadmap'>
-                    <p style={{ fontSize: '15px', color:'#0027AD', lineHeight:'25px', textAlign:'start'}}>BDLux Lighting - Electrical Designer ★</p>
-                    <p style={{ fontSize: '13px', color:'#000A2A', lineHeight:'25px', textAlign:'start'}}>Warsaw, Poland: 2016 - 2017</p>
-                <div className='row'>
-                <div className='col'>
-                    <div className="bottom-space-sm" />
-                <p style={{fontSize: '13px', lineHeight:'18px', textAlign:'justify'}}>
-                Working in a team of electrical designers and architects to develop lighting plans, schedules and calculations 
-                for commercial, industrial and residential applications that comply with electrical code and meet client's requirements.
-                Developing CAD drawing, 3D designs and cost estimations. 
-                </p>
-                <p style={{ fontSize: '10px', textAlign:'start'}}>TOOLS</p>
-
-                            <p style={{fontSize: '10px', lineHeight:'18px', textAlign:'start'}}>
-                                AutoCAD, 3DS Max, DiaLUX 
-                            </p>
-                        </div>
-
-                        </div>
-                </div>
-                <div className='roadmap'>
+                    <div className='roadmap'>
                     <p style={{ fontSize: '15px', color:'#0027AD', lineHeight:'25px', textAlign:'end'}}>★ Schneider Electric - Electrical Engineering Intern</p>
                     <p style={{ fontSize: '13px', color:'#000A2A', lineHeight:'25px', textAlign:'end'}}>Warsaw, Poland: 2016</p>
                 <div className='row'>
                 <div className='col'>
                     <div className="bottom-space-sm" />
                 <p style={{fontSize: '13px', lineHeight:'18px', textAlign:'end'}}>
-                Produce documentation packages for industrial maintenance and development project which inludes power distribution equipment. 
+                Produce documentation packages for industrial maintenance and development project which includes power distribution equipment. 
                 Maintain business relationships, acting as a mediary between clients and design engineers.
                 </p>
                 <p style={{ fontSize: '10px', textAlign:'end'}}>TOOLS</p>
 
                             <p style={{fontSize: '10px', lineHeight:'18px', textAlign:'end'}}>
-                                AutoCAD, MS Excel
+                                AutoCAD, MS Excel, 3DsMAX
                             </p>
                         </div>
 
@@ -202,7 +180,7 @@ const CirriculuVitae = () => {
                     <div className="bottom-space-sm" />
                 <p style={{fontSize: '13px', lineHeight:'18px', textAlign:'justify'}}>
                 Commercial and residential electrical system installations, troubleshooting, repair and maintenance.
-                Installation of ethernet networks and endpoints in a commercial and industrial environments.
+                Installation of Ethernet networks and endpoints in a commercial and industrial environments.
                 </p>
                 <p style={{ fontSize: '10px', textAlign:'start'}}>TOOLS</p>
 
@@ -213,27 +191,12 @@ const CirriculuVitae = () => {
 
                         </div>
                 </div>
-                <div className='roadmap'>
-                    <p style={{ fontSize: '18px', color:'#0027AD', lineHeight:'25px', textAlign:'end'}}>★ HelpX Organic Farms- Volunteer</p>
-                    <p style={{ fontSize: '13px', color:'#000A2A', lineHeight:'25px', textAlign:'end'}}>Nibro, Sweden: 2014</p>
-                <div className='row'>
-                <div className='col'>
-                    <div className="bottom-space-sm" />
-                <p style={{fontSize: '13px', lineHeight:'18px', textAlign:'end'}}>
-                CSA (community supported agriculture), culinary herbs, feed production, forestry, gardens, 
-                vegetable, self-sufficiency and community projects development.
-                </p>
-                <p style={{ fontSize: '10px', textAlign:'end'}}>TOOLS</p>
-
-                            <p style={{fontSize: '10px', lineHeight:'18px', textAlign:'end'}}>
-                                Hand Tools, Machinery
-                            </p>
-                        </div>
-
-                        </div>
                 </div>
+
         </Box>
         <div className="bottom-space" />
+        
+                
       </>
   )
 }

@@ -31,23 +31,8 @@ const SocialIcons = (props) => {
     return (
         <Icons>
             <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.github.com"}}>
+                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/onenewmaan"}}>
                     <Github width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
-                </NavLink>
-            </div>
-            <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.github.com"}}>
-                    <Twitter width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
-                </NavLink>
-            </div>
-            <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.github.com"}}>
-                    <Facebook width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
-                </NavLink>
-            </div>
-            <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.github.com"}}>
-                    <YouTube width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
                 </NavLink>
             </div>
             <Line color={props.theme} />

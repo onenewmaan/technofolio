@@ -8,18 +8,19 @@ import { Blogs } from '../data/BlogData'
 
 
 const MainContainer = styled.div`
-background-image: url(${img});
+background-image: url('https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80');
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center;
+height: 100vh;
 `
 const Container = styled.div`
 background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`};
 width: 100%;
 height: auto;
 position: relative;
-padding-bottom: 5rem;
+height: 100vh;
 `
 
 

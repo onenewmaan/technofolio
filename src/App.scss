@@ -111,3 +111,19 @@ $white: #ffffff;
 .bottom-space-xxxsm {
   margin-bottom: -5px;
 }
+@media screen and (max-width: 960px) {
+  .tree {
+    margin: 0px 50px 0px 0px;
+    transform: scale(0.45);
+  }
+  .mobile-img {
+    transform: scale(0.65);
+  }
+  .mobile-shrink {
+    transform: scale(0.75);
+  }
+  .mobile-shrink-2 {
+    transform: scale(0.65);
+  }
+  .mobile-break { display: none; }
+}

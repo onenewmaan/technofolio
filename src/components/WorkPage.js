@@ -88,7 +88,6 @@ const WorkPage = () => {
 
         <LogoComponent theme='dark'/>
         <SocialIcons theme='dark'/>
-        <TopButton />
 
         <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
             {

@@ -19,7 +19,6 @@ function App() {
   return <>
     <GlobalStyle />
     <ThemeProvider theme={lightTheme}>
-      <SoundBar />
       <Switch>
         <Route exact path="/" component={Main} />
         <Route exact path="/cv" component={CirriculuVitae} />
