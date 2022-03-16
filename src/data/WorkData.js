@@ -6,16 +6,15 @@ export const Work = [
         tags:["react","ThreeJS","Web3"],
         
         demo:"https://outerspaces.io",
-        github:""
+        github:"https://github.com/onenewmaan/outerspaces"
     },
     {
         id:1,
-        name:"More coming soon...",
-        description:"",
-        tags:["work in progress"],
-        
-        demo:"",
-        github:""
+        name:"Aggie's Photos",
+        description:"Simple React Gallery",
+        tags:["react"],
+        demo:"https://www.aggie.photos",
+        github:"https://github.com/onenewmaan/aggiepictures"
     },
     
   

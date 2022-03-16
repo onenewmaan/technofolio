@@ -95,10 +95,10 @@ const SkillsPage = () => {
                     <div className="bottom-space-sm" />
                     <p>
                     <strong>
-                    TOOLS
+                    TOOLS / TECHNOLOGIES
                         </strong>
                         <ul>
-                            <p>Python, Linux, Bash, AWS, SQL, JS, GIT, NVIDIA, TCP/IP, OpenVPN, RS232/485, MODBUS</p>
+                            <p>Python, Linux, Bash, Google, AWS, SQL, ETL, JS, GIT, NVIDIA, TCP/IP, OpenVPN, RS232/485, MODBUS and more</p>
                         </ul>
                     </p>
                 </Main>

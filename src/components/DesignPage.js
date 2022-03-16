@@ -5,12 +5,10 @@ import {motion} from 'framer-motion';
 
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
-import TopButton from '../subComponents/TopButton';
 
 import { Work } from "../data/WorkData";
 import Card from '../subComponents/Card';
 import { YinYang } from './AllSvgs';
-import BigTitle from '../subComponents/BigTitle';
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -54,7 +52,7 @@ const container = {
 
 }
 
-const WorkPage = () => {
+const DesignPage = () => {
 
     const ref = useRef(null);
     const yinyang = useRef(null);
@@ -99,8 +97,6 @@ const WorkPage = () => {
         <Rotate ref={yinyang}>
             <YinYang width={80} height={80} fill={darkTheme.text} />
         </Rotate>
-
-        <BigTitle text="WORK" top='10%' right="20%" />
         </Box>
 
         </ThemeProvider>
@@ -108,4 +104,4 @@ const WorkPage = () => {
     )
 }
 
-export default WorkPage
+export default DesignPage
