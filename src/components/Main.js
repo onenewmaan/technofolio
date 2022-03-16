@@ -94,7 +94,9 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h1>hi, take a look around.</h1>
+                    <h2>hi
+                        <br />launched this site on 03/2022, a lot of it is #wip
+                        <br />feel free to take a look around.</h2>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
