@@ -95,8 +95,8 @@ const Main = () => {
                 <SocialIcons />
                 <Center>
                     <h2>hi
-                        <br />launched this site on 15/03/2022, so a lot of it is still work in progress...
-                        <br />but feel free to take a look around.</h2>
+                        <br />launched this site on 15/03/2022, so a lot of it is still 
+                        <br />work in progress... updates coming weekly.</h2>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
