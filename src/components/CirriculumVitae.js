@@ -115,7 +115,7 @@ const CirriculuVitae = () => {
                             </p>
                             <p style={{ fontSize: '10px', textAlign:'end'}}>TOOLS</p>
                             <p style={{fontSize: '10px', lineHeight:'18px', textAlign:'end'}}>
-                                Python, HMI, XML, HTML, css, JS, AWS, Linux, SQL, TCP/IP, OpenVPN, RS232/485, MODBUS, GIT, MQTT
+                                Python, HMI, XML, HTML, css, JS, AWS, Linux, SQL, TCP/IP, HTTP, OpenVPN, RS232/485, MODBUS, GIT, MQTT
                             </p>
                         
                         </div>

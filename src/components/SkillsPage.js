@@ -82,7 +82,14 @@ const SkillsPage = () => {
                     <img src="img/dunningkruger.png" width="450px" height="350px"/>
                     </div>
                     <p>
-                    As a result of my education, research and work experience, I've developed skills in a variety of fields stretching from electrical circuits, automation, data science to computer networks. My biggest skill is the ability to promptly look up solutions to problems - read the manual. Stack Overflow was one of my most commonly visited websites in 2021.. I enjoy experimenting in my lab with various IoT devices, electronics and security tools also collecting, parsing, visualizing and analyzing data logs. Apart from being full-time employed as a system integrator, I'm currently pursuing personal projects in tensorflow object detection and taking a CISSP Certification course as I'd like to keep on broadening my knowledge in the fields of Cybersecurity and Data Engineering.
+                    As a result of my education, research and work experience, 
+                    I've developed skills in a variety of fields stretching from electrical circuits, 
+                    automation, data science to computer networks. My biggest skill is the ability to promptly 
+                    look up solutions to problems - read the manual. Stack Overflow was one of my most commonly 
+                    visited websites in 2021.. I enjoy experimenting in my lab with various IoT devices, 
+                    electronics and security tools also collecting, parsing, visualizing and analyzing data logs. 
+                    Apart from being full-time employed as a system integrator, 
+                    I'm currently pursuing personal projects in tensorflow object detection and taking a CISSP Certification course as I'd like to keep on broadening my knowledge in the fields of Cybersecurity and Data Engineering.
                     </p>
                     <div className="bottom-space-sm" />
                     <p>
@@ -90,7 +97,7 @@ const SkillsPage = () => {
                     TOOLS / TECHNOLOGIES
                         </strong>
                         <ul>
-                            <p>Python, Linux / Unix, Bash, Windows, Google, AWS, SQL, ETL, JS, GIT, NVIDIA, TCP/IP, OpenVPN, RS232/485, MODBUS and more</p>
+                            <p>Python, Linux / Unix, Bash, Windows, Google, AWS, SQL, ETL, JS, GIT, NVIDIA, TCP/IP, HTTP, SSH, OpenVPN, RS232/485, MODBUS and more</p>
                         </ul>
                     </p>
                 </Main>

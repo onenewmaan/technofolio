@@ -94,9 +94,11 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h2>hi
-                        <br />launched this site on 15/03/2022, so a lot of it is still 
-                        <br />work in progress... updates coming weekly.</h2>
+                    <h2>Welcome to my site,
+                        <br />
+                        <br /> Here is where I will keep track of some the projects I do.
+                        <br /> Launched in in 2022, a lot of it is work in progress...
+                        <br /> updates coming weekly.</h2>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
@@ -112,7 +114,7 @@ const Main = () => {
                     whileTap={{scale: 0.9}}
                     
                     >
-                        Say hi..
+                        email.
                     </motion.h2>
                 </Contact>
                 <BLOG to="/project">
@@ -120,7 +122,7 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        Projects
+                        projects
                     </motion.h3>
                 </BLOG>
                 <WORK to="/design" >
@@ -128,7 +130,7 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        Design
+                        design
                     </motion.h3>
                 </WORK>
                 <BottomBar>

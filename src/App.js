@@ -11,6 +11,7 @@ import ProjectPage from './components/ProjectPage';
 import DesignPage from './components/DesignPage';
 import SkillsPage from './components/SkillsPage';
 import SoundBar from "./subComponents/SoundBar";
+import DogeNode from './components/projects/dogenode';
 
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/" component={Main} />
         <Route exact path="/cv" component={CirriculuVitae} />
         <Route exact path="/project" component={ProjectPage} />
+        <Route exact path="/project/dogenode" component={DogeNode} />
         <Route exact path="/design" component={DesignPage} />
         <Route exact path="/skills" component={SkillsPage} />
       </Switch>

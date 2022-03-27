@@ -8,12 +8,11 @@ import { Blogs } from '../data/BlogData'
 
 
 const MainContainer = styled.div`
-background-image: url('https://images.unsplash.com/photo-1524234107056-1c1f48f64ab8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80');
-
-height: 110vh;
+background-image: url('img/project.png');
+background-repeat: round;
+height: 100vh;
 `
 const Container = styled.div`
-background-color: ${props => `rgba(${props.theme.bodyRgba},0.8)`};
 width: 100%;
 height: auto;
 position: relative;
