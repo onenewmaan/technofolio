@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import img from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import BlogComponent from "./BlogComponent";

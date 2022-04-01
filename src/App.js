@@ -10,7 +10,6 @@ import CirriculuVitae from './components/CirriculumVitae';
 import ProjectPage from './components/ProjectPage';
 import DesignPage from './components/DesignPage';
 import SkillsPage from './components/SkillsPage';
-import SoundBar from "./subComponents/SoundBar";
 import DogeNode from './components/projects/dogenode';
 
 

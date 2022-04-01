@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme } from './Themes';
-import {Design, Develope} from './AllSvgs';
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
 import ParticleComponent from "../subComponents/ParticleComponent";
@@ -37,21 +36,21 @@ justify-content: space-between;
     background-color: ${props => props.theme.text};
 }
 `
-const Title = styled.h2`
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-font-size: calc(1em + 1vw);
-${Main}:hover &{
-    &>*{
-        fill:${props => props.theme.body};
-    }
-}
-&>*:first-child{
-    margin-right: 1rem;
-}
-`
+// const Title = styled.h2`
+// display: flex;
+// flex-direction: column;
+// justify-content: center;
+// align-items: center;
+// font-size: calc(1em + 1vw);
+// ${Main}:hover &{
+//     &>*{
+//         fill:${props => props.theme.body};
+//     }
+// }
+// &>*:first-child{
+//     margin-right: 1rem;
+// }
+// `
 const p = styled.h3`
 color: ${props => props.theme.text};
 font-size: calc(0.6em + 1vw);
@@ -79,7 +78,7 @@ const SkillsPage = () => {
                 <ParticleComponent theme='light' />
                 <Main>
                     <div className="mobile-shrink-2">
-                    <img src="img/dunningkruger.png" width="450px" height="350px"/>
+                    <img src="img/dunningkruger.png" alt="" width="450px" height="350px"/>
                     </div>
                     <p>
                     As a result of my education, research and work experience,

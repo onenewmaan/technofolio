@@ -7,7 +7,7 @@ export const Blogs = [
         tags:["doge","raspberrypi","ssd"],
         date:"20 Sep, 2021",
         imgSrc:"img/dogenode.png",
-        link:""
+        link:"/project/dogenode"
     },
     {
         id:2,

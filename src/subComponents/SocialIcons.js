@@ -2,7 +2,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Github, Twitter, Facebook, YouTube } from "../components/AllSvgs";
+import { Github } from "../components/AllSvgs";
 import { darkTheme } from "../components/Themes";
 
 const Icons = styled.div`
