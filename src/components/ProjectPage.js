@@ -7,7 +7,7 @@ import { Blogs } from '../data/BlogData'
 
 
 const MainContainer = styled.div`
-background-image: url('img/project.png');
+background-color: color;
 background-repeat: round;
 height: 100vh;
 `

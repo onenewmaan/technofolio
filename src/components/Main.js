@@ -94,10 +94,8 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h2>Welcome to my site,
-                        <br />
-                        <br /> Here is where I will keep track of some the projects I do.
-                        <br /> Launched in in 2022, a lot of it is work in progress...
+                    <h2>started this in march 2022
+                        <br /> Here is where I keep track of <i>some</i> the projects I do.
                         <br /> updates coming weekly.</h2>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
