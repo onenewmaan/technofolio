@@ -112,7 +112,7 @@ const Main = () => {
                     whileTap={{scale: 0.9}}
                     
                     >
-                        email.
+                        email me.
                     </motion.h2>
                 </Contact>
                 <BLOG to="/project">

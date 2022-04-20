@@ -10,10 +10,10 @@ export const Work = [
     },
     {
         id:1,
-        name:"Aggie's Photos",
+        name:"Aggie's Pictures",
         description:"Simple React Gallery",
         tags:["react"],
-        demo:"https://www.aggie.photos",
+        demo:"https://www.aggie.pictures",
         github:"https://github.com/onenewmaan/aggiepictures"
     },
     

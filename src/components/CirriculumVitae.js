@@ -93,7 +93,7 @@ const CirriculuVitae = () => {
         transition={{type: 'spring', duration:2, delay:1 }}
         >
           
-          <p style={{ fontSize: '30px', fontWeight:'700', color:'#000A2A', lineHeight:'25px', textAlign:'end'}}>Cirriculum Vitae</p>
+          <p style={{ fontSize: '30px', fontWeight:'700', color:'#000A2A', lineHeight:'25px', textAlign:'end'}}>cirriculum vitae</p>
           <div className="bottom-space-sm" />
 
             <p style={{ fontSize: '15px', lineHeight:'25px', textAlign:'end'}}>
