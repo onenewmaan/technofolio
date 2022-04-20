@@ -95,7 +95,7 @@ const Main = () => {
                 <SocialIcons />
                 <Center>
                     <h2>started this in march 2022
-                        <br /> Here is where I keep track of <i>some</i> the projects I do.
+                        <br /> here is where I'll keep track of <i>some</i> of the projects I do.
                         <br /> updates coming weekly.</h2>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
