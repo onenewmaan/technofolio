@@ -17,4 +17,12 @@ export const Blogs = [
         imgSrc:"img/k75.png",
         link:""
     },
+    {
+        id:3,
+        name:"Low Power ESP32-CAM",
+        tags:["IoT","MQTT", "ESP32"],
+        date:"25 March, 2022",
+        imgSrc:"img/esp32.png",
+        link:""
+    },
 ] 
