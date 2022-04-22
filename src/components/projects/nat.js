@@ -81,7 +81,7 @@ return (
                         <img src="/img/dnat.png" alt="" width="600px" height="350px"/>
                     </div>
 
-                    <div className="bottom-space-sm" />c
+                    <div className="bottom-space-sm" />
                     <table>
                         <tr>
                             <th>SNAT</th>
@@ -120,6 +120,22 @@ return (
                             <td>Website hosted inside data center behind Firewall and needs to be accessible to users over Internet.</td>
                         </tr>
                     </table>
+                    <div className="bottom-space-sm" />
+
+                    <p style={{fontSize:'14px'}}>
+                    <b>
+                    OpenVPN client configurations should include the specified routes:
+                    </b>
+                        <br/>example:
+                    <br />
+                    <i>iroute 10.3.6.45 255.255.255.0
+                        <br/>
+                        push-remove "route 10.14.19.0"
+                        <br/>
+                        push "client-nat snat 92.97.90.0 255.255.255.0 10.3.6.0"
+                        <br/>
+                        push "client-nat dnat 10.3.6.0 255.255.255.0 92.97.90.0"</i>
+                    </p>
 
         </Box>
         <div className="bottom-space" />   
