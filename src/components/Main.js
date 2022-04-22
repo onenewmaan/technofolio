@@ -94,9 +94,9 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h2>started this in march 2022
-                        <br /> here is where I'll keep track of <i>some</i> of the projects I do.
-                        <br /> updates coming weekly.</h2>
+                    <h2>blong started in march 2022
+                        <br /> I'll keep track of <i>some</i> of notes & projects I do.
+                        <br /> updates coming ~ weekly.</h2>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
@@ -112,7 +112,7 @@ const Main = () => {
                     whileTap={{scale: 0.9}}
                     
                     >
-                        email me.
+                        email.
                     </motion.h2>
                 </Contact>
                 <BLOG to="/project">

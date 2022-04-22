@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Box = styled(NavLink)`
 width: calc(10rem + 15vw);
 text-decoration: none;
-height: 20rem;
+height: 15rem;
 padding: 1rem;
 color: ${props => props.theme.text};
 border: 2px solid ${props => props.theme.text};
