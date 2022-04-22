@@ -120,7 +120,7 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        projects
+                        notes & projects
                     </motion.h3>
                 </BLOG>
                 <WORK to="/design" >

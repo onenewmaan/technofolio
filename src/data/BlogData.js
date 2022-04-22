@@ -25,4 +25,12 @@ export const Blogs = [
         imgSrc:"img/esp32.png",
         link:"/project/esp32cam"
     },
+    {
+        id:4,
+        name:"Network Address Translation",
+        tags:["NAT","SNAT", "DNAT"],
+        date:"20 Aprl, 2022",
+        imgSrc:"img/dnat.png",
+        link:"/project/nat"
+    },
 ] 

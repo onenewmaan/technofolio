@@ -55,8 +55,10 @@ return (
 
                     <p style={{fontSize:'14px'}}>
                     <h4 style={{fontSize:'16px'}}>Flash Rasbian onto a microSD -</h4> download rasbian 
-                    from <a href="https://www.raspberrypi.com/software/operating-systems/ ">Raspberry Pi</a> official website for your device (I recommend version lite if you're familiar with CLI).
-                    Insert your SD card into you PC and run <i><b>lsblk</b></i> to list you disks (USB ports should be listed as sdX... and card reader ports as mmblkX...)
+                    from <a href="https://www.raspberrypi.com/software/operating-systems/ ">Raspberry Pi</a> official website for your device 
+                    (I recommend version lite if you're familiar with CLI).
+                    Insert your SD card into you PC and run <i><b>lsblk</b></i> to list you disks (USB ports should be listed as sdX... 
+                    and card reader ports as mmblkX...)
                     <br />
                     Indentify your drive, example: <i>sdb</i> and unmount it: <i>sudo umount /dev/sdb1 && sudo umount /dev/sdb2. </i>
                     Once the Rasbian OS file finishes downloading, extract the iso file from the compressed folder and we are ready to flash: 
