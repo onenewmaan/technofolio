@@ -94,8 +94,8 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h2>blong started in march 2022
-                        <br /> I'll keep track of <i>some</i> of notes & projects I do.
+                    <h2>launched in march 2022
+                        <br /> my incomplete <i>collection</i> of thoughts, notes & projects.
                         <br /> updates coming ~ weekly.</h2>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
