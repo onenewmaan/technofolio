@@ -23,6 +23,6 @@ export const Blogs = [
         tags:["IoT","MQTT", "ESP32"],
         date:"25 March, 2022",
         imgSrc:"img/esp32.png",
-        link:""
+        link:"/project/esp32cam"
     },
 ] 

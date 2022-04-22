@@ -11,7 +11,7 @@ import ProjectPage from './components/ProjectPage';
 import DesignPage from './components/DesignPage';
 import SkillsPage from './components/SkillsPage';
 import DogeNode from './components/projects/dogenode';
-
+import ESP32cam from './components/projects/esp32cam';
 
 
 
@@ -24,6 +24,7 @@ function App() {
         <Route exact path="/cv" component={CirriculuVitae} />
         <Route exact path="/project" component={ProjectPage} />
         <Route exact path="/project/dogenode" component={DogeNode} />
+        <Route exact path="/project/esp32cam" component={ESP32cam} />
         <Route exact path="/design" component={DesignPage} />
         <Route exact path="/skills" component={SkillsPage} />
       </Switch>
