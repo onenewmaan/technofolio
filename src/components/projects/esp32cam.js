@@ -51,8 +51,10 @@ return (
                     <h4 style={{fontSize:'18px'}}>
                       Configure Simultaneous AP and Managed Mode WiFi on Raspberry Pi Zero W
                     </h4>
+
+
                     <div className="bottom-space-sm" />
-                    <p style={{fontSize:'14px'}}>
+                    <p style={{fontSize:'14px', textAlign:'justify'}}>
                       Recently purchased a hand full of Raspberry Pi Zero W boards, 
                       and plan to use them for automation / IoT-type work. 
                       One of my requirements is that the WiFi on this board be able to run as both a “managed” device 
@@ -64,9 +66,10 @@ return (
                       By combining some information garnered from the web along with some trial and error, 
                       finally able to get AP/Manged mode working, as described below. LET'S GO!
                     </p>
+                    
 
                     <div className="bottom-space-sm" />
-                    <p style={{fontSize:'14px'}}>
+                    <p style={{fontSize:'14px',textAlign:'justify'}}>
                     <h4 style={{fontSize:'16px'}}>Flash Rasbian onto a microSD -</h4> download rasbian 
                     from the official <a href="https://www.raspberrypi.com/software/operating-systems/ ">RaspberryPi</a> website for your device.
                     I am using a Raspberry Pi Zero W.
@@ -78,10 +81,18 @@ return (
                     Once the Rasbian OS file finishes downloading, extract the iso file from the compressed folder and we are ready to flash: 
                     <br />
                     <i>sudo dd bs=4M if=~/Downloads/2022_path_to_iso of=/dev/sdX conv=fsync status=progress</i>
+                    <br />
+                    <br />
+                      Plug the SD card into the Raspberry Pi and boot. If you need to connect to the raspberry pi remotely create an empty file 
+                      in the /root directory named ssh and wpa_cupplicant.conf with your network details 
+                      (<a href="https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-networking31">example</a>), this will allow the Raspberry pi 
+                      to connect to your WiFi automalically and enable to ssh server as well, 
+                      but I am using a keyboard and monitor and will edit the wpa_supplicant file at a later time.
                     </p>
 
+
                     <div className="bottom-space-sm" />
-                    <p style={{fontSize:'14px'}}>
+                    <p style={{fontSize:'14px', textAlign:'justify'}}>
                       <h4 style={{fontSize:'16px'}}>Add A Virtual AP Device At Boot by Adding Udev Rule </h4>
                       <br/>Similarly to how systemd allocates a wlan0 device at boot time, we need a device allocated for our AP before we can operate it.
                         On the build of Raspbian Stretch I’m using, only wlan0 is available automatically. 
@@ -94,37 +105,29 @@ return (
                       <br />
                       Replace both MAC addresses above withyour own RPi MAC. Find yours for example from your router’s client list, or from the RPi’s command line, type:
                       <br /><i>iw dev</i>
-
-
-                    </p>
-
-                    <div className="bottom-space-sm" />
-                    <p style={{fontSize:'14px'}}>
-                      <h4 style={{fontSize:'16px'}}>Add A Virtual AP Device At Boot by Adding Udev Rule </h4>
-                      <br/>Similarly to how systemd allocates a wlan0 device at boot time, we need a device allocated for our AP before we can operate it.
-                        On the build of Raspbian Stretch I’m using, only wlan0 is available automatically. 
-                        We create a file caled <i>/etc/udev/rules.d/70-persistent-net.rules</i> which contains the following:
                       <br />
-                      <br /><i>SUBSYSTEM=="ieee80211", ACTION=="add|change", ATTR{'{macaddress}'}=="b8:27:eb:ff:ff:ff", KERNEL=="phy0", \</i> 
-                      <br /><i>RUN+="/sbin/iw phy phy0 interface add ap0 type __ap", \</i> 
-                      <br /><i>RUN+="/bin/ip link set ap0 address b8:27:eb:ff:ff:ff"</i>
+                      <br />
+                      A number of tutorials claims that the address for the virtual AP must be different from the primary MAC address. 
+                      I found there to be no difference in behavior, but you should be able to change the last byte, for example, to give your client and AP different MACs.
+                      The device we created above is called ap0. We will refer to this elsewhere, so if you decide to change the name, 
+                      make sure to use the new name everywhere else I reference it, or things won’t work correctly.
                     </p>
 
                     <div className="bottom-space-sm" />
-                    <p style={{fontSize:'14px'}}>
-                      Plug the SD card into the Raspberry Pi and boot. If you need to connect to the raspberry pi remotely create an empty file 
-                      in the /root directory named ssh and wpa_cupplicant.conf with your network details 
-                      (<a href="https://www.raspberrypi.com/documentation/computers/configuration.html#configuring-networking31">example</a>), this will allow the Raspberry pi 
-                      to connect to your WiFi automalically and enable to ssh server as well, 
-                      but I am using a keyboard and monitor and will edit the wpa_supplicant file at a later time. Once loged in as pi, type:
+                    <p style={{fontSize:'14px', textAlign:'justify'}}>
+                    <h4 style={{fontSize:'16px'}}>Installing dnsmasq, hostasp, mosquitto</h4>
+                      <br/>Now we need to download and install dnsmasq for our purposes of a DHCP server for our WiFi AP, hostapd will define our AP's 
+                      physical operation based on the driver configuration and use mosquitto for out MQTT broker
+                      <br />
                       <br /><i>sudo raspi-config</i>
                       <br />
                       System Options > Wireless LAN > Enter SSID & Password
                       <br />
                       <i>sudo apt-get updade && sudo apt-get full-upgrade -y</i>
                       <br />
-                      <i>sudo apt-get install mosquitto mosquitto-clients</i>
+                      <i>sudo apt-get install mosquitto mosquitto-clients dnsmasq hostapd -y</i>
                     </p>
+
                     <div className="bottom-space-sm" />
 
                     <p style={{fontSize:'14px'}}>
