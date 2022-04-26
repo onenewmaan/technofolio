@@ -126,50 +126,75 @@ return (
                       <i>sudo apt-get updade && sudo apt-get full-upgrade -y</i>
                       <br />
                       <i>sudo apt-get install mosquitto mosquitto-clients dnsmasq hostapd -y</i>
-                    </p>
-
-                    <div className="bottom-space-sm" />
-
-                    <p style={{fontSize:'14px'}}>
-                    Install AP and Management Software
-                    In order to work as an access point, the Raspberry Pi needs to have the hostapd access point software package installed 
-                    and enabled the wireless access point service and set it to start when your Raspberry Pi boots:
-                    <br />
-                    <i>sudo apt install hostapd</i>
-                    <br />
-                    <i>sudo systemctl unmask hostapd</i> up
-                    <br />
-                    <i>sudo systemctl enable hostapd</i>
-                    <br />
-                    <br />
-                    In order to provide network management services (DNS, DHCP) to wireless clients, the Raspberry Pi needs to have the dnsmasq software package installed:
-                    <br />
-                    <i>sudo apt install dnsmasq</i>
-                    <br />
-                    <br />
-                    Finally, install netfilter-persistent and its plugin iptables-persistent. This utility helps by saving firewall rules and restoring them when the Raspberry Pi boots:
-                    <br />
-                    <i>sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent</i>
-                    <br />
-                    Software installation is complete.
+                      <br />
+                      <br />
+                      Wait awhile, and this process should complete. 
+                      The install process may automatically start the dnsmasq.service in systemd right after installation and it will probably fail, 
+                      since <i>ap0</i> does not exist until we reboot. Disregard this for now. Next, we need to modify 3 files. 
+                      First we modify <i>/etc/dnsmasq.conf</i> by adding the following lines at the end of the file:
+                      <br />
+                      <br /><i>interface=lo,ap0</i>
+                      <br /><i>no-dhcp-interface=lo,wlan0</i>
+                      <br /><i>bind-interfaces</i>
+                      <br /><i>server=8.8.8.8</i>
+                      <br /><i>domain-needed</i>
+                      <br /><i>bogus-priv</i>
+                      <br /><i>dhcp-range=192.168.10.50,192.168.10.150,12h</i>
+                      <br />
+                      <br />
+                      Referenced ap0 above, so use your device name here if you changed it earlier. 
+                      I’ve added Google’s DNS server IP here (8.8.8.8) feel free to use one from your router/ISP/or whatever. 
+                      I’ve also made the assumption that our DHCP server will give out addresses on the 192.168.10.0/24 subnet, ranging from .50 to .150. 
+                      You can substiute your own subnet here, but be sure to remember it for later, as it should match the static IP we assign your AP. 
+                      The 12 hour lease time can also be arbitrarily changed to suit your needs.
+                      <br />
+                      <br />
+                      Next, we need to modify the file at <i>/etc/hostapd/hostapd.conf</i>. 
+                      I found many different parameters that can go in here, but this is what worked for me. 
+                      Feel free to experiment further by poking around online. Lets do this for now:
+                      <br />
+                      <br /><i>ctrl_interface=/var/run/hostapd</i>
+                      <br /><i>ctrl_interface_group=0</i>
+                      <br /><i>interface=ap0</i>
+                      <br /><i>driver=nl80211</i>
+                      <br /><i>ssid=YourApNameHere</i>
+                      <br /><i>hw_mode=g</i>
+                      <br /><i>channel=11</i>
+                      <br /><i>wmm_enabled=0</i>
+                      <br /><i>macaddr_acl=0</i>
+                      <br /><i>auth_algs=1</i>
+                      <br /><i>wpa=2</i>
+                      <br /><i>wpa_passphrase=YourPassPhraseHere</i>
+                      <br /><i>wpa_key_mgmt=WPA-PSK</i>
+                      <br /><i>wpa_pairwise=TKIP CCMP</i>
+                      <br /><i>rsn_pairwise=CCMP</i>
+                      <br />
+                      <br />A couple things to note here: Replace <i>YourApNameHere</i> and <i>YourPassPhraseHere</i> with the SSID and Passphrase you wish to use.
+                      Multiple sources claiming that the channel you use here must match the channel that your wlan0 iterface is using for its WiFi connection, 
+                      as reported by iw dev. Testing showed, it looks like the RPi’s AP will dynamically change channels to match whatever channel 
+                      the wlan0 interface is currently using. Other article authores claim they watched this happen in real time by rebooting the WiFi AP the RPi was using, 
+                      forcing it to roam and switch to another AP in my house. In the process, wlan0 switched from channel 11 to channel 6, 
+                      and ap0 did the same, without losing connectivity.
+                      <br />
+                      <br />
+                      Finally, we modify <i>/etc/default/hostapd </i> adding the following:
+                      <br /><i>DAEMON_CONF="/etc/hostapd/hostapd.conf"</i>
+                      <br />
+                      <br />
+                      This tells the hostpad daemon to use our new conf file. I’m not sure if this matters since we will be launching hostapd manually and pointing to the proper config file, 
+                      but it shouldn’t hurt anything.
                     </p>
                     <div className="bottom-space-xsm" />
 
-                    <p style={{fontSize:'14px'}}>
-                    <br /> In linux the /etc folder contains most of the system softwarew configuration files and settings. The /etc 
-                    folder is protected, sudo privilages are needed. type:
+                    <div className="bottom-space-sm" />
+                    <p style={{fontSize:'14px',textAlign:'justify'}}>
+                    <h4 style={{fontSize:'16px'}}>Modify Our Interfaces File</h4>
                     <br />
-                    <i>sudo nano /etc/dhcpcd.conf</i>
-                    <br />
-                    <br />
-                    Navigate to the bottom of the file and add this line:
-                    <br />
-                    <i>denyinterfaces wlan0</i>
-                    <br />
-                    <br />
-                    Setting up a static IP
-                    <br />
-                    
+                    Next, define the WiFi network interfaces, both for the managed access (wlan0) and for the access point (ap0). 
+                    Using wpa_supplicant to assist with connecting to WPA-encrypted WiFi networks. 
+                    If you followed the “headless” bring-up tutorial I mentioned in the previously, you will have already touched both of the 
+                    following files and configured wlan0 as required. In that case, we’ll be adding a static IP definition for ap0. 
+                    <br />First, we need to modify /etc/wpa_supplicant/wpa_supplicant.conf ...tbc
                     </p>
 
         </Box>
