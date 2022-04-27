@@ -194,7 +194,84 @@ return (
                     Using wpa_supplicant to assist with connecting to WPA-encrypted WiFi networks. 
                     If you followed the “headless” bring-up tutorial I mentioned in the previously, you will have already touched both of the 
                     following files and configured wlan0 as required. In that case, we’ll be adding a static IP definition for ap0. 
-                    <br />First, we need to modify /etc/wpa_supplicant/wpa_supplicant.conf ...tbc
+                    <br />First, we need to modify /etc/wpa_supplicant/wpa_supplicant.conf:
+                    <br />
+                    <br /><i>source-directory /etc/network/interfaces.d</i>
+                    <br />
+                    <br /><i>auto lo</i>
+                    <br /><i>auto ap0</i>
+                    <br /><i>auto wlan0</i>
+                    <br /><i>iface lo inet loopback</i>
+                    <br />
+                    <br /><i>allow-hotplug ap0</i>
+                    <br /><i>iface ap0 inet static</i>
+                    <br /><i>   address 192.168.10.1</i>
+                    <br /><i>   netmask 255.255.255.0</i>
+                    <br /><i>   hostapd /etc/hostapd/hostapd.conf</i>
+                    <br />
+                    <br /><i>allow-hotplug wlan0</i>
+                    <br /><i>iface wlan0 inet manual</i>
+                    <br /><i> wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf</i>
+                    <br /><i> iface AP1 inet dhcp</i>
+                    <br /><i> iface AP2 inet dhcp</i> - if you have more than one SSID configured
+                    <br />
+                    <br />
+                    As you can see, we want both ap0 and wlan0 to start up automatically, 
+                    with ap0 defined to have a static IP of 192.168.10.1 on the 192.168.10.0/24 subnet. 
+                    Recall, the DHCP address range we defined in /etc/dnsmasq.conf matched this subnet. 
+                    Adjust accordingly if you made changes. We also reference our hostapd config file here, 
+                    to direct the AP configuration for ap0.
+                    <br />For wlan0, we start it using manual mode and point it to our 
+                    /etc/wpa_supplicant/wpa_supplicant.conf file for our WiFi network definitions. 
+                    The wpa-roam designator will allow the interface to move freely between our defined 
+                    networks. Finally, the last two lines use our friendly names from wpa_supplicant.conf 
+                    to refer to our available networks, and indicate this interface should use DHCP 
+                    supplied by those APs to assign an address to wlan0. Please note the order here: 
+                    ap0 must come up before wlan0, or they won’t both work at the same time.
+                    </p>
+
+                    <div className="bottom-space-sm" />
+                    <p style={{fontSize:'14px',textAlign:'justify'}}>
+                    <h4 style={{fontSize:'16px'}}>Configure MQTT</h4>
+                    <br />
+                    As is the case with most packages from Debian, the broker is immediately started.  
+                    Since we have to configure it first, stop it, and let's open the configuration file:
+                    <br /><i>sudo /etc/init.d/mosquitto stop</i>
+                    <br /><i>sudo nano /etc/mosquitto/mosquitto.conf</i>
+                    <br />
+                    <br />
+                    <be />Edit the file to resemble this:
+                    <br />
+                    <br /><i>pid_file /var/run/mosquitto.pid</i>
+                    <br />
+                    <br /><i>persistence true</i>
+                    <br /><i>persistence_location /var/lib/mosquitto/</i>
+                    <br />
+                    <br /><i>log_dest topic</i>
+                    <br />
+                    <br /><i>log_type error</i>
+                    <br /><i>log_type warning</i>
+                    <br /><i>log_type notice</i>
+                    <br /><i>log_type information</i>
+                    <br />
+                    <br /><i>connection_messages true</i>
+                    <br /><i>log_timestamp true</i>
+                    <br />
+                    <br /><i>include_dir /etc/mosquitto/conf.d</i>
+                    <br />
+                    <br />
+                    This puts the logging information as a “topic” so we can subscribe to it later 
+                    on to see what is going on in our IOTRFID system.
+                    <br />
+                    <br />Lets start and test:
+                    <br /><i>sudo /etc/init.d/mosquitto start</i>
+                    <br />
+                    <br />Terminal 1
+                    <br /><i>mosquitto_sub -d -t test/msg</i>
+                    <br />
+                    <br />Terminal 2
+                    <br /><i>mosquitto_pub -d -t test/msg -m "Hello from Terminal window 2!"</i>
+                    <br />
                     </p>
 
         </Box>

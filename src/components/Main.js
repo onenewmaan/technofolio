@@ -94,9 +94,8 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h2>launched in march 2022
-                        <br /> my incomplete <i>collection</i> of thoughts, notes & projects.
-                        <br /> updates coming ~ weekly.</h2>
+                    <h2>my incomplete <i>collection</i> of thoughts, notes & projects.</h2>
+                    <p style={{fontSize:'15px',textAlign:'justify'}}>updates ~ weekly</p>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
