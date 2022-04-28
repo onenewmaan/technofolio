@@ -95,7 +95,7 @@ const Main = () => {
                 <SocialIcons />
                 <Center>
                     <h2>my incomplete <i>collection</i> of thoughts, notes & projects.</h2>
-                    <p style={{fontSize:'15px',textAlign:'justify'}}>updates ~ weekly</p>
+                    <p style={{fontSize:'15px',textAlign:'justify'}}>updates ~ bi-weekly</p>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
                     <motion.h2
