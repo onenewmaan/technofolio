@@ -26,6 +26,8 @@ z-index: 5;
 
 const Image = styled.div`
 background-image: ${props => `url(${props.img})`};
+filter: grayscale(100%);
+   -webkit-filter: grayscale(100%);
 width: 100%;
 height: 60%;
 background-size: cover;

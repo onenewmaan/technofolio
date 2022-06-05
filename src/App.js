@@ -13,6 +13,7 @@ import SkillsPage from './components/SkillsPage';
 import DogeNode from './components/projects/dogenode';
 import ESP32cam from './components/projects/esp32cam';
 import NAT from './components/projects/nat';
+import MasterMonitor from './components/projects/mastermonitor';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route exact path="/project/dogenode" component={DogeNode} />
         <Route exact path="/project/esp32cam" component={ESP32cam} />
         <Route exact path="/project/NAT" component={NAT} />
+        <Route exact path="/project/mastermonitor" component={MasterMonitor} />
         <Route exact path="/design" component={DesignPage} />
         <Route exact path="/skills" component={SkillsPage} />
       </Switch>
