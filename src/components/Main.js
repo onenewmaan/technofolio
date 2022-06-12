@@ -94,7 +94,7 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h2>my incomplete <i>collection</i> of thoughts, notes & projects.</h2>
+                    <h2>my <i>collection</i> of projects, designs & notes.</h2>
                     <p style={{fontSize:'15px',textAlign:'justify'}}>updates ~ bi-weekly</p>
                 </Center>
                 <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
@@ -114,12 +114,12 @@ const Main = () => {
                         email.
                     </motion.h2>
                 </Contact>
-                <BLOG to="/project">
+                <BLOG to="/cv">
                 <motion.h3
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        notes & projects
+                        experience
                     </motion.h3>
                 </BLOG>
                 <WORK to="/design" >
@@ -131,12 +131,12 @@ const Main = () => {
                     </motion.h3>
                 </WORK>
                 <BottomBar>
-                    <ABOUT to="/cv">
+                    <ABOUT to="/project">
                     <motion.h3
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                            experience
+                            projects
                         </motion.h3>
                     </ABOUT>
                     <SKILLS to="/skills">

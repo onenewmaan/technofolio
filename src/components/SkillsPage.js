@@ -77,9 +77,6 @@ const SkillsPage = () => {
                 <SocialIcons theme='light' />
                 <ParticleComponent theme='light' />
                 <Main>
-                    <div className="mobile-shrink-2">
-                    <img src="img/dunningkruger.png" alt="" width="450px" height="350px"/>
-                    </div>
                     <p>
                     As a result of my education, research and work experience,
                     I've developed competence in a variety of fields stretching from electrical circuits,
