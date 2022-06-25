@@ -94,10 +94,10 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
                 <Center>
-                    <h2>my <i>collection</i> of projects, designs & notes.</h2>
-                    <p style={{fontSize:'15px',textAlign:'justify'}}>updates ~ bi-weekly</p>
+                    <h2>open <i>space</i> of tomorrow's ideas</h2>
+                    <p style={{fontSize:'15px',textAlign:'justify'}}>for clients ~ with clients</p>
                 </Center>
-                <Contact target="_blank" to={{pathname: "mailto:nowiczenko@pm.me"}}>
+                <Contact target="_blank" to={{pathname: "mailto:aggie.pictures@pm.me"}}>
                     <motion.h2
                     initial={{
                         y:-200,
@@ -111,15 +111,15 @@ const Main = () => {
                     whileTap={{scale: 0.9}}
                     
                     >
-                        email.
+                        contact.
                     </motion.h2>
                 </Contact>
-                <BLOG to="/cv">
+                <BLOG to="/photography">
                 <motion.h3
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        experience
+                        photography
                     </motion.h3>
                 </BLOG>
                 <WORK to="/design" >
@@ -144,7 +144,7 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                            skills
+                            artecture
                         </motion.h3>
                     </SKILLS>
                 </BottomBar>

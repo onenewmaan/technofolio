@@ -3,50 +3,19 @@
 export const Blogs = [
     {
         id:1,
-        name:"CISSP - Security and Risk Management",
-        tags:["CISSP", "IPSEC","Cybersecurity"],
+        name:"Risk Management in Modern Arcitecture",
+        tags:["Risk", "Arcitecture","Modern"],
         date:"11 June, 2022",
-        imgSrc:"img/CISSP_Domain1.png",
-        link:"/project/cissp/domain1"
+        imgSrc:"img/artecture.png",
+        link:"/project/pdf/document"
     },
     {
         id:2,
-        name:"Master Monitor - Grafana",
-        tags:["InfluxDB", "Grafana","MQTT"],
+        name:"Master Bedroom - Titant",
+        tags:["Custom", "Tofino"],
         date:"04 June, 2022",
-        imgSrc:"img/mastermonitor.png",
-        link:"/project/mastermonitor"
-    },{
-        id:3,
-        name:"Low Power ESP32-CAM",
-        tags:["IoT","MQTT", "ESP32"],
-        date:"25 March, 2022",
-        imgSrc:"img/esp32.png",
-        link:"/project/esp32cam"
-    },
-    {
-        id:4,
-        name:"Network Address Translation",
-        tags:["NAT","SNAT", "DNAT"],
-        date:"20 Aprl, 2022",
-        imgSrc:"img/dnat.png",
-        link:"/project/nat"
-    },
-    {
-        id:5,
-        name:"Dogecoin Core Node on Raspberry Pi",
-        tags:["doge","raspberrypi","ssd"],
-        date:"20 Sep, 2021",
-        imgSrc:"img/dogenode.png",
-        link:"/project/dogenode"
-    },
-    {
-        id:6,
-        name:"BMW k75 cafe racer project",
-        tags:["electrical","restoration", "digital", "conversion"],
-        date:"12 Nov, 2019",
-        imgSrc:"img/k75.png",
-        link:""
+        imgSrc:"img/master.png",
+        link:"/project/master"
     },
     
 ] 

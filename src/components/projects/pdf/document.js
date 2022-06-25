@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import LogoComponent from "../../../subComponents/LogoComponent";
 import { Document, Page, pdfjs } from 'react-pdf';
-import CISSP_Domain1 from "./CISSP_Domain1.pdf"
+import Arcitecture_Domain from './Arcitecture_Domain.pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -61,7 +61,7 @@ const Domain1 = () => {
         transition={{type: 'spring', duration:2, delay:1 }}
         >
           <div>
-            <Document file={CISSP_Domain1} onLoadSuccess={onDocumentLoadSuccess} options={options} onContextMenu={(e) => e.preventDefault()}>
+            <Document file={Arcitecture_Domain} onLoadSuccess={onDocumentLoadSuccess} options={options} onContextMenu={(e) => e.preventDefault()}>
             {Array.from(new Array(numPages), (el, index) => (
               <Page key={`page_${index + 1}`} pageNumber={index + 1} />
             ))}

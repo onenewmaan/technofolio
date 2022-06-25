@@ -3,7 +3,6 @@ import styled, { ThemeProvider } from "styled-components";
 import { lightTheme } from './Themes';
 import LogoComponent from "../subComponents/LogoComponent";
 import SocialIcons from "../subComponents/SocialIcons";
-import ParticleComponent from "../subComponents/ParticleComponent";
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -75,27 +74,15 @@ const SkillsPage = () => {
             <Box>
                 <LogoComponent theme='light' />
                 <SocialIcons theme='light' />
-                <ParticleComponent theme='light' />
                 <Main>
                     <p>
-                    As a result of my education, research and work experience,
-                    I've developed competence in a variety of fields stretching from electrical circuits,
-                    automation, data science to computer networks. My biggest skill is the ability to promptly
-                    look up solutions to problems or read the manual.
-                    Stack Overflow should have been my default search engine in 2020-2021.
-                    I enjoy experimenting in my lab with various IoT devices,
-                    electronics and security tools, also collecting, parsing, visualizing and analyzing data logs.
-                    Apart from being full-time employed as a system integrator,
-                    I'm currently pursuing personal projects in network security / CISSP Certification
-                    and object detection - Cybersecurity and Data Engineering.
                     </p>
                     <div className="bottom-space-sm" />
                     <p>
                     <strong>
-                    TOOLS / TECHNOLOGIES
                         </strong>
                         <ul>
-                            <p>Linux / Unix, Bash, Windows, Google, AWS, Python, SQL, ETL, JS, GIT, NVIDIA, TCP/IP, HTTP, SSH, OpenVPN, RS232/485, MODBUS and more</p>
+                            <p>...</p>
                         </ul>
                     </p>
                 </Main>
