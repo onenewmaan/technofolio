@@ -35,21 +35,7 @@ justify-content: space-between;
     background-color: ${props => props.theme.text};
 }
 `
-// const Title = styled.h2`
-// display: flex;
-// flex-direction: column;
-// justify-content: center;
-// align-items: center;
-// font-size: calc(1em + 1vw);
-// ${Main}:hover &{
-//     &>*{
-//         fill:${props => props.theme.body};
-//     }
-// }
-// &>*:first-child{
-//     margin-right: 1rem;
-// }
-// `
+
 const p = styled.h3`
 color: ${props => props.theme.text};
 font-size: calc(0.6em + 1vw);

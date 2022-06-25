@@ -5,8 +5,9 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
 import {motion} from 'framer-motion';
 
+
 const MainContainer = styled.div`
-background: ${props => props.theme.body};
+background-image: url('img/bg.jpg');
 width: 100vw;
 height: 100vh;
 overflow: hidden;
