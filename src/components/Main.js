@@ -128,24 +128,24 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        design
+                        animation
                     </motion.h3>
                 </WORK>
                 <BottomBar>
-                    <ABOUT to="/project">
+                    <ABOUT to="/architecture">
                     <motion.h3
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                            projects
+                            architecture
                         </motion.h3>
                     </ABOUT>
-                    <SKILLS to="/skills">
+                    <SKILLS to="/design">
                     <motion.h3
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                            artecture
+                            design
                         </motion.h3>
                     </SKILLS>
                 </BottomBar>

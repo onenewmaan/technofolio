@@ -54,27 +54,23 @@ ul, p{
 }
 `
 
-const SkillsPage = () => {
+const Artecture = () => {
     return (
         <ThemeProvider theme={lightTheme}>
             <Box>
                 <LogoComponent theme='light' />
                 <SocialIcons theme='light' />
                 <Main>
-                    <p>
-                    </p>
                     <div className="bottom-space-sm" />
-                    <p>
                     <strong>
                         </strong>
                         <ul>
                             <p>...</p>
                         </ul>
-                    </p>
                 </Main>
             </Box>
         </ThemeProvider>
     )
 }
 
-export default SkillsPage
+export default Artecture

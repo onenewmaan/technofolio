@@ -41,12 +41,12 @@ const options = {
 
 const Domain1 = () => {
 
-  const [file, setFile] = useState('./sample.pdf');
+  // const [file, setFile] = useState('./doc.pdf');
   const [numPages, setNumPages] = useState(null);
 
-  function onFileChange(event) {
-    setFile(event.target.files[0]);
-  }
+  // function onFileChange(event) {
+  //   setFile(event.target.files[0]);
+  // }
 
   function onDocumentLoadSuccess({ numPages: nextNumPages }) {
     setNumPages(nextNumPages);

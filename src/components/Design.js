@@ -32,7 +32,7 @@ grid-gap: calc(1rem + 2vw);
 height: 15rem;
 `
 
-const ProjectPage = () => {
+const Design = () => {
     return (
         <MainContainer>
             <Container>
@@ -52,4 +52,4 @@ const ProjectPage = () => {
     )
 }
 
-export default ProjectPage
+export default Design
