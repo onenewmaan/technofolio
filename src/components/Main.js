@@ -98,78 +98,35 @@ const Main = () => {
                 <Center>
                 <div class="poster">
                     <div class="lens-flare"></div>
-                    <div class="stripes">
-                        <div class="stripe-block str1">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="stripe-block str2">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                        <div class="stripe-block str3">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
                     <div class="info">
-
                         <header>
-                            <h3>Codepen</h3>
+                            <h3>AGGIE PICTURES</h3>
                             <p>Presents</p>
                         </header>
-
                         <main>
-                            <svg id="text-1" viewBox="0 0 450 100">
-                                <rect mask="url(#knockout-text-1)" />
-
-                                <mask id="knockout-text-1">
-                                    <rect />
-                                    <text x="50%" y="80" text-anchor="middle">Summer</text>
-                                </mask>
-                            </svg>
-
-                            <svg id="text-2" viewBox="0 0 450 100">
-                                <rect mask="url(#knockout-text-2)" />
-
-                                <mask id="knockout-text-2">
-                                    <rect />
-                                    <text x="50%" y="80" text-anchor="middle">Lounge</text>
-                                </mask>
-                            </svg>
+                            <h1>SUMMER SESSIONS</h1>
                         </main>
 
                         <section id="date">
-                            <div class="circle-item">22</div>
-                            <div class="circle-item">Jan</div>
+                            <div class="circle-item">1</div>
+                            <div class="circle-item">JULY</div>
                             <div class="circle-item">2022</div>
                         </section>
 
                         <section id="talent">
                             <div class="dj-title">Featuring</div>
                             <ul class="dj-list">
-                                <li>DJ Coyier</li>
-                                <li>//</li>
-                                <li>DJ Kuhn</li>
-                                <li>//</li>
-                                <li>D-Jhey</li>
+                                <li>1:1 //</li>
+                                <li> Portraits // </li>
+                                <li>Family</li>
                             </ul>
                         </section>
 
                         <footer>
-                            <div class="tickets">
-                                $25 Pre Sale Tickets / 18+ Ages / $30 at Door
-                            </div>
                             <div class="venue">
-                                <h3>Club Sicontis</h3>
-                                <p>Level 2, 48 Fort Street, AKL</p>
-                                <p><small>www.clubsicontis.com</small></p>
+                                <h3>BOOK YOUR SPOT</h3>
+                                <p>Alberta //  British Columbia</p>
+                                <p><small>aggie.pictures@pm.me</small></p>
                             </div>
                         </footer>
 
@@ -190,7 +147,7 @@ const Main = () => {
                         photography
                     </motion.h3>
                 </BLOG>
-                <WORK to="/design" >
+                <WORK to="/profile" >
                 <motion.h3 whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
                         profile
                     </motion.h3>

@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import ArchitectureCard from "./ArchitectureCard";
 import { Posts } from '../data/ArchitectureData'
@@ -28,23 +28,7 @@ align-items: center;
 justify-content: space-between;
 `
 
-const p = styled.h3`
-color: ${props => props.theme.text};
-font-size: calc(0.6em + 1vw);
-padding: 0.5rem 0;
-${Main}:hover &{
-    
-    color:${props => props.theme.body};
 
-}
-strong{
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-}
-ul, p{
-    margin-left: 2rem;
-}
-`
 const Center = styled.div`
 display: flex;
 justify-content: center;

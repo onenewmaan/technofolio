@@ -32,6 +32,7 @@ const Box =  styled.div`
   font-size: calc(0.6rem + 1vw);
   backdrop-filter: blur(4px);
   overflow: hidden;
+  background: url('./assets/bg3.jpg');
 `
 function Item({ index, position, scale, c = new THREE.Color(), ...props }) {
   const ref = useRef()
@@ -69,26 +70,18 @@ function Items({ w = 0.7, gap = 0.15 }) {
 }
 function Overlay() {
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
-      <nav className="nav nav--left js-nav">
+    <div className='overlay' style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%', background:'../assets/bg3.jpg'}}>
+      <nav className="nav nav--right js-nav">
         <ul>
           <li>
-            <a href="https://www.instagram.com/aggie.pictures/" className="is-active"><span>instagram / </span></a>
+            <a href="https://www.instagram.com/aggie.pictures/" className="is-active"><span>instagram </span></a>
           </li>
         </ul>
       </nav>
 
       <figure className="logo">
-        <img src="camera.png" width="166px" height="200px" />
+        <img src="camera.png" width="166px" height="200px" alt="camera-logo"/>
       </figure>
-
-      <nav className="nav nav--right js-nav">
-        <ul>
-          <li>
-            <a href="mailto:aggie.pictures@pm.me" className="is-active"><span>aggie.pictures@pm.me</span></a>
-          </li>
-        </ul>
-      </nav>
 
       <div className="vert-text">
       <span>

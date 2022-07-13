@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Box = styled(NavLink)`
-width: calc(55rem + 1vw);
+width: 45vw;
 text-decoration: none;
 height: 40rem;
 padding: 1rem;
