@@ -17,5 +17,12 @@ export const Blogs = [
         imgSrc:"img/master.png",
         link:"/project/master"
     },
-    
+    {
+        id:2,
+        name:"Master Bedroom - Titant",
+        tags:["Custom", "Tofino"],
+        date:"04 June, 2022",
+        imgSrc:"img/master.png",
+        link:"/project/master"
+    },
 ] 

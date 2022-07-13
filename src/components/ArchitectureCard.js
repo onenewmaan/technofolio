@@ -8,7 +8,7 @@ text-decoration: none;
 height: 40rem;
 padding: 1rem;
 color: ${props => props.theme.text};
-backdrop-filter: blur(10px);
+backdrop-filter: blur(2px);
 cursor: pointer;
 display: flex;
 flex-direction: column;
@@ -17,7 +17,7 @@ z-index: 5;
 &:hover{
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
-    transition: all 5s ease;
+    transition: all 0.3s ease;
 }
 `
 
@@ -56,7 +56,7 @@ const Date = styled.span`
 padding: 0.5rem 0;
 `
 
-const BlogComponent = (props) => {
+const ArchitectureCard = (props) => {
     const {name, tags, date, imgSrc, link } = props.blog;
     return (
         <Box target="_blank" to={{pathname: link}}>
@@ -78,4 +78,4 @@ const BlogComponent = (props) => {
     )
 }
 
-export default BlogComponent
+export default ArchitectureCard

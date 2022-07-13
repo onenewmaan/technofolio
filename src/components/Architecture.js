@@ -1,39 +1,31 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { lightTheme } from './Themes';
 import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
+import ArchitectureCard from "./ArchitectureCard";
+import { Posts } from '../data/ArchitectureData'
 
-const Box = styled.div`
+const ArtecturePage = styled.div`
 background-color: ${props => props.theme.body};
 width: 100vw;
-height: 100vh;
+height: 110vh;
 position: relative;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
 `
 const Main = styled.div`
-border: 2px solid ${props => props.theme.text};
-color: ${props => props.theme.text};
-background-color: ${props => props.theme.body};
 padding: 2rem;
 top: 150px;
-width: 70vw;
-height: fit-content;
+width: 99vw;
+height: 800px;
 z-index: 3;
 line-height: 1.5;
 cursor: pointer;
-
-font-family: monospace;
+font-family: candara;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
-&:hover{
-    color: ${props => props.theme.body};
-    background-color: ${props => props.theme.text};
-}
 `
 
 const p = styled.h3`
@@ -53,23 +45,35 @@ ul, p{
     margin-left: 2rem;
 }
 `
+const Center = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 1rem;
+`
+const Grid = styled.div`
+display: grid;
+grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+grid-gap: calc(1rem + 0vw);
+height: 15rem;
+`
 
 const Artecture = () => {
     return (
-        <ThemeProvider theme={lightTheme}>
-            <Box>
+            <ArtecturePage>
                 <LogoComponent theme='light' />
-                <SocialIcons theme='light' />
                 <Main>
-                    <div className="bottom-space-sm" />
-                    <strong>
-                        </strong>
-                        <ul>
-                            <p>...</p>
-                        </ul>
+                <Center>
+                    <Grid>
+                        {
+                            Posts.map(blog => {
+                                return <ArchitectureCard key={blog.id} blog={blog} />
+                            })
+                        }
+                    </Grid>
+                </Center>
                 </Main>
-            </Box>
-        </ThemeProvider>
+            </ArtecturePage>
     )
 }
 
