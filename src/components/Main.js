@@ -32,25 +32,6 @@ right: calc(1rem + 2vw);
 text-decoration: none;
 z-index: 1;
 `
-
-const BLOG = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 55%;
-right: calc(1rem + 2vw);
-transform: rotate(90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index: 1;
-`
-const WORK = styled(NavLink)`
-color: ${props => props.click ? props.theme.body : props.theme.text};
-position: absolute;
-top: 47%;
-left: 2rem;
-transform: rotate(-90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index: 1;
-`
 const BottomBar = styled.div`
 position: absolute;
 top: 2.5rem;
@@ -65,7 +46,7 @@ color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 z-index: 1;
 `
-const SKILLS = styled(NavLink)`
+const PHOTOGRAPHY = styled(NavLink)`
 color: ${props => props.theme.text};
 text-decoration: none;
 z-index: 1;
@@ -94,7 +75,6 @@ const Main = () => {
         <MainContainer>
             <Container>
                 <LogoComponent />
-                <SocialIcons />
                 <Center>
                 <div class="poster">
                     <div class="lens-flare"></div>
@@ -133,39 +113,32 @@ const Main = () => {
                     </div>
                 </div>
                 </Center>
-                <Contact target="_blank" to={{pathname: "mailto:aggie.pictures@pm.me"}}>
-                    <motion.h2 initial={{  y:-200, transition: { type:'spring', duration: 1.5, delay:1}}}
-                     animate={{ y:0,transition: { type:'spring', duration: 1.5, delay:1}}}
+                <Contact target="_blank" to="/profile">
+                    <motion.h3 initial={{  y:-200, transition: { type:'spring', duration: 1.5, delay:1}}}
+                     animate={{ y:0,transition: { type:'spring', duration: 1.5, delay:0.5}}}
                      whileHover={{scale: 1.1}}
                      whileTap={{scale: 0.9}}
+                     style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
                      >
-                        contact.
-                    </motion.h2>
+                        profile.
+                    </motion.h3>
                 </Contact>
-                <BLOG to="/photography">
-                <motion.h3  whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                        photography
-                    </motion.h3>
-                </BLOG>
-                <WORK to="/profile" >
-                <motion.h3 whileHover={{scale: 1.1}} whileTap={{scale: 0.9}}>
-                        profile
-                    </motion.h3>
-                </WORK>
                 <BottomBar>
                     <ABOUT to="/architecture">
-                    <motion.h3 whileHover={{scale: 1.1}}whileTap={{scale: 0.9}}>
+                    <motion.h3 whileHover={{scale: 1.1}}whileTap={{scale: 0.9}}
+                    style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}>
                             architecture
                         </motion.h3>
                     </ABOUT>
-                    <SKILLS to="/design">
+                    <PHOTOGRAPHY to="/photography">
                     <motion.h3
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
+                    style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
                     >
-                            design
+                            photography
                         </motion.h3>
-                    </SKILLS>
+                    </PHOTOGRAPHY>
                 </BottomBar>
             </Container>
         </MainContainer>

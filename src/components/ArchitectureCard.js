@@ -23,8 +23,6 @@ z-index: 5;
 
 const Image = styled.div`
 background-image: ${props => `url(${props.img})`};
-filter: grayscale(100%);
-   -webkit-filter: grayscale(100%);
 width: 100%;
 height: 60%;
 background-size: cover;
@@ -55,7 +53,7 @@ padding-right: 0.5 rem;
 const Date = styled.span`
 padding: 0.5rem 0;
 `
-
+//<Box target="_blank" to={{pathname: link}}>
 const ArchitectureCard = (props) => {
     const {name, tags, date, imgSrc, link } = props.blog;
     return (
