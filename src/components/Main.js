@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 import LogoComponent from "../subComponents/LogoComponent";
-import SocialIcons from "../subComponents/SocialIcons";
 import { NavLink } from "react-router-dom";
 import {motion} from 'framer-motion';
 

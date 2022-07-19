@@ -1,8 +1,7 @@
 import React,{ Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './styles.css'
-import '../node_modules/normalize.css'
+import '../node_modules/normalize.css';
 import { BrowserRouter } from 'react-router-dom';
 
 
