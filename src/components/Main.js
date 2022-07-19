@@ -97,9 +97,9 @@ const Main = () => {
                             </section>
                             <footer>
                                 <div class="venue">
-                                    <h3>BOOK YOUR SPOT</h3>
-                                    <p>Alberta // British Columbia</p>
-                                    <p><small>aggie.pictures@pm.me</small></p>
+                                    <h3>BOOK YOUR SPOT</h3><br />
+                                    <h3>Alberta // British Columbia</h3><br />
+                                    <h3><small>aggie.pictures@pm.me</small></h3>
                                 </div>
                             </footer>
                         </div>
@@ -128,7 +128,7 @@ const Main = () => {
                         whileTap={{scale: 0.9}}
                         style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
                         >
-                            PHOTOGRAPHY 
+                            photography 
                         </motion.h3>
                     </PHOTOGRAPHY>
                 </BottomBar>

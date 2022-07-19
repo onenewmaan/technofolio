@@ -69,6 +69,7 @@ const Profile = () => {
                         </div>
                         <div className="spread__page-bottom">
                         <i className="fas fa-bicycle fa-4x"></i>
+                        <p>aggie.pictures@pm.me</p>
                         <div className="num">✤</div>
                         </div>
                     </div>

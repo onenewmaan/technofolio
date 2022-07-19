@@ -5,7 +5,7 @@ import { darkTheme } from "../components/Themes";
 import { NavLink } from "react-router-dom";
 
 
-const Logo = styled.h1`
+const Logo = styled.h2`
 display: inline-block;
 font-family: 'Karla', sans-serif;
 font-weight: 400;
