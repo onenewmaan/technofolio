@@ -3,7 +3,7 @@ import styled from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 
 const MainContainer = styled.div`
-background-color: ${props => props.theme.body};
+background-color: white;
 width: 100vw;
 height: 100%;
 position: relative;

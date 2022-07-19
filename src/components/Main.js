@@ -80,7 +80,7 @@ const Main = () => {
                                 <p>Presents</p>
                             </header>
                             <main>
-                                <h1><i>SUMMER SESSIONS</i></h1>
+                                <h3><i>SUMMER SESSIONS</i></h3>
                             </main>
                             <section id="date">
                                 <div class="circle-item">1</div>
