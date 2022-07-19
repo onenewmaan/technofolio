@@ -12,7 +12,7 @@ height: 100vh;
 overflow: hidden;
 position: relative;
 
-h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6{
     font-family: 'Karla', sans-serif;
     font-weight: 500;
 }
@@ -20,7 +20,6 @@ h2,h3,h4,h5,h6{
 
 const Container = styled.div`
 padding: 2rem;
-
 `
 
 const Contact = styled(NavLink)`
@@ -50,7 +49,6 @@ color: ${props => props.theme.text};
 text-decoration: none;
 z-index: 1;
 `
-
 const Center = styled.div`
 position: absolute;
 border: 2px solid black;
@@ -69,48 +67,43 @@ transition: all 1s ease;
 `
 
 const Main = () => {
-
     return (
         <MainContainer>
             <Container>
                 <LogoComponent />
                 <Center>
-                <div class="poster">
-                    <div class="lens-flare"></div>
-                    <div class="info">
-                        <header>
-                            <h3>AGGIE PICTURES</h3>
-                            <p>Presents</p>
-                        </header>
-                        <main>
-                            <h1>SUMMER SESSIONS</h1>
-                        </main>
-
-                        <section id="date">
-                            <div class="circle-item">1</div>
-                            <div class="circle-item">JULY</div>
-                            <div class="circle-item">2022</div>
-                        </section>
-
-                        <section id="talent">
-                            <div class="dj-title">Featuring</div>
-                            <ul class="dj-list">
-                                <li>1:1 //</li>
-                                <li> Portraits // </li>
-                                <li>Family</li>
-                            </ul>
-                        </section>
-
-                        <footer>
-                            <div class="venue">
-                                <h3>BOOK YOUR SPOT</h3>
-                                <p>Alberta //  British Columbia</p>
-                                <p><small>aggie.pictures@pm.me</small></p>
-                            </div>
-                        </footer>
-
+                    <div class="poster">
+                        <div class="lens-flare"></div>
+                        <div class="info">
+                            <header>
+                                <h3>AGGIE PICTURES</h3>
+                                <p>Presents</p>
+                            </header>
+                            <main>
+                                <h1><i>SUMMER SESSIONS</i></h1>
+                            </main>
+                            <section id="date">
+                                <div class="circle-item">1</div>
+                                <div class="circle-item">JULY</div>
+                                <div class="circle-item">2022</div>
+                            </section>
+                            <section id="talent">
+                                <div class="dj-title">Featuring</div>
+                                <ul class="dj-list">
+                                    <li>1:1 //</li>
+                                    <li> Portraits // </li>
+                                    <li>Family</li>
+                                </ul>
+                            </section>
+                            <footer>
+                                <div class="venue">
+                                    <h3>BOOK YOUR SPOT</h3>
+                                    <p>Alberta // British Columbia</p>
+                                    <p><small>aggie.pictures@pm.me</small></p>
+                                </div>
+                            </footer>
+                        </div>
                     </div>
-                </div>
                 </Center>
                 <Contact target="_blank" to="/profile">
                     <motion.h3 initial={{  y:-200, transition: { type:'spring', duration: 1.5, delay:1}}}
@@ -124,18 +117,18 @@ const Main = () => {
                 </Contact>
                 <BottomBar>
                     <ABOUT to="/architecture">
-                    <motion.h3 whileHover={{scale: 1.1}}whileTap={{scale: 0.9}}
-                    style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}>
-                            architecture
+                        <motion.h3 whileHover={{scale: 1.1}}whileTap={{scale: 0.9}}
+                        style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}>
+                                architecture
                         </motion.h3>
                     </ABOUT>
                     <PHOTOGRAPHY to="/photography">
-                    <motion.h3
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.9}}
-                    style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
-                    >
-                            photography
+                        <motion.h3
+                        whileHover={{scale: 1.1}}
+                        whileTap={{scale: 0.9}}
+                        style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
+                        >
+                            PHOTOGRAPHY 
                         </motion.h3>
                     </PHOTOGRAPHY>
                 </BottomBar>
