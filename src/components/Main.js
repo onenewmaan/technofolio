@@ -17,12 +17,10 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 500;
 }
 `
-
 const Container = styled.div`
 padding: 2rem;
 `
-
-const Contact = styled(NavLink)`
+const PROFILE = styled(NavLink)`
 color: ${props => props.theme.text};
 position: absolute;
 top: 2rem;
@@ -105,16 +103,16 @@ const Main = () => {
                         </div>
                     </div>
                 </Center>
-                <Contact target="_blank" to="/profile">
-                    <motion.h3 initial={{  y:-200, transition: { type:'spring', duration: 1.5, delay:1}}}
-                     animate={{ y:0,transition: { type:'spring', duration: 1.5, delay:0.5}}}
-                     whileHover={{scale: 1.1}}
-                     whileTap={{scale: 0.9}}
-                     style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
-                     >
-                        profile.
-                    </motion.h3>
-                </Contact>
+                <PROFILE to="/profile">
+                        <motion.h3 initial={{  y:-200, transition: { type:'spring', duration: 1.5, delay:1}}}
+                            animate={{ y:0,transition: { type:'spring', duration: 1.5, delay:0.5}}}
+                            whileHover={{scale: 1.1}}
+                            whileTap={{scale: 0.9}}
+                            style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
+                            >
+                            profile. 
+                        </motion.h3>
+                    </PROFILE>
                 <BottomBar>
                     <ABOUT to="/architecture">
                         <motion.h3 whileHover={{scale: 1.1}}whileTap={{scale: 0.9}}

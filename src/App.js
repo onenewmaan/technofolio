@@ -7,11 +7,8 @@ import { Route, Switch } from "react-router-dom";
 // components
 import Main from './components/Main';
 import Photography from './components/Photography'
-import ProjectPage from './components/Design';
 import Profile from './components/Profile';
 import Architecture from './components/Architecture';
-import Master from './components/projects/master';
-import Document from './components/projects/pdf/document';
 
 
 
@@ -24,9 +21,6 @@ function App() {
         <Route exact path="/photography" component={Photography} />
         <Route exact path="/architecture" component={Architecture} />
         <Route exact path="/profile" component={Profile} />
-        <Route exact path="/project" component={ProjectPage} />
-        <Route exact path="/project/master" component={Master} />
-        <Route exact path="/project/pdf/document" component={Document} />
       </Switch>
     </ThemeProvider>
     </>

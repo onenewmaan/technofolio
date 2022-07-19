@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<h1 style={{'marginTop':'250px', 'marginLeft':'30vw', 'fontSize':'25rem'}}>Loading...</h1>}>
       <App />
     </Suspense>
     </BrowserRouter>
