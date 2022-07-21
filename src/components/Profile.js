@@ -45,32 +45,34 @@ const Profile = () => {
                     </div>
                     <div className="spread__right">
                         <div className="title" style={{'paddingTop':'20px'}}>
-                            <h1 className="large"><span class="tiny">BUILDING</span> ROCK SOLID <span class="tiny">RELATIONS</span></h1>
+                            <h1 className="large"><span class="tiny">BUILDING</span> ROCK SOLID <span class="tiny">SOLUTIONS</span></h1>
                             <h1 className="small">
-                            Believing in the detail of every stage.
+                            No resistance can drop your potential ϟ
                             </h1>
                         </div>
                         <div className="content">
                         <div className="fr" lang="fr">
                             
                             <p>
-                            To us "state-of-the-art" means innovation in every process, quality and efficiency in every task, expertise and know-how in every step, respect, loyalty and trust for all customers and employees. Always with environmental and social consciousness.
+                            The developed competence in fields stretching from electrical circuits, 
+                            automation, data science to computer networks and more allows me to conduct lab experiments with various IoT devices, 
+                            electronics, software tools as well as collect, parse, visualize and analyze data. 
                             </p>
                             
                         </div>
                         <div className="en" lang="en">
-                        <p>
-                            The expertise, an efficient process and the courage to embrace any challenge with the joy, responsability and determination that defines us.
-                            </p>
+                        <p>Apart from being 
+                            a SCADA System Integration Engineer, I'm also pursuing personal projects in network security 
+                            and data science.</p>
                             <p>
-                            A never-ending search for perfection has led us to a stage of maturity that makes us see with clarity solutions where others still see problems.
+                            A never-ending search for perfection leads us to a stage of maturity that makes us see with clarity solutions where others still see problems.
                             </p>
                         </div>
                         </div>
                         <div className="spread__page-bottom">
                         <i className="fas fa-bicycle fa-4x"></i>
-                        <p>aggie.pictures@pm.me</p>
-                        <div className="num">✤</div>
+                        <p>nowiczenko ＠ pm.me</p>
+                        <div className="num">⌨</div>
                         </div>
                     </div>
                     </div>

@@ -41,12 +41,12 @@ ul {
 }
 
 .poster {
-	height: 75vh;
+	height: 55vh;
 	max-width: 700px;
 	top: 25px;
-	width: 35vw;
-	background-image: url("https://www.sicontis.com/codepen/cpc-knockout-text/trees-bkg.jpg");
-	background-size: cover;
+	width: 25vw;
+	background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80");
+	background-size: auto;
 	background-position-y: -100px;
 	background-repeat: no-repeat;
 	position: relative;
@@ -55,7 +55,14 @@ ul {
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 	border: 10px solid rgb(34, 33, 33);
 }
-
+@media screen and (max-width: 991px) {
+	.poster {
+	  width:75vmin;
+	  height: 70%;
+	  top: 75px;
+	  bottom: 25px;
+	}
+  }
 .lens-flare {
 	position: absolute;
 	left: 0;
@@ -107,7 +114,7 @@ ul {
 			rgb(208, 19, 109) 100%
 		);
 	mix-blend-mode: hard-light;
-	opacity: 0.7;
+	opacity: 0.3;
 }
 .info {
 	position: absolute;
@@ -314,7 +321,7 @@ footer {
   
 	&__left {
 	  background: black;
-	  background-image: url("https://images.unsplash.com/photo-1599420186985-5c3d1a038e84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+	  background-image: url("https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1931&q=80");
 	  background-repeat: no-repeat;
 	  background-position: center center;
 	  background-size: cover;
@@ -365,3 +372,129 @@ footer {
 	  margin: 0 auto;
 	}
   }
+  /* Mixins */
+
+$small-breakpoint: 640px;
+$medium-breakpoint: 768px;
+$large-breakpoint: 1024px;
+$xlarge-breakpoint: 1600px;
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $small-breakpoint) { @content; }
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $medium-breakpoint) { @content; }
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $large-breakpoint) { @content; }
+  }
+  @else if $canvas == XL {
+   @media only screen and (min-width: $xlarge-breakpoint) { @content; }
+  }
+}
+
+@mixin baseline($gridvalue) {
+  background: linear-gradient(#FFCDD2 1px, transparent 1px);
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: 100% $gridvalue + px;
+}
+
+/* Styling */
+
+body {
+	font-size: 16px;
+	color: rgba(0, 0, 0, 0.87);
+	// Remove comment below to see the basegrid alignment
+	// @include baseline(8);
+}
+
+h1 {
+	font-size: 72px;
+	margin: 1px 0 0;
+}
+
+h2 {
+	font-weight:400;
+	font-size: 24px;
+	line-height:40px;
+	margin:25px 0 0;
+}
+
+p {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+p > em {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	font-style: normal;
+	text-transform:uppercase;
+}
+
+.post {
+	padding: 24px;
+}
+
+.entry-header {
+	text-align:center;
+	@include MQ(S) {
+		max-width: 640px;
+		margin:0 auto;
+	}
+	@include MQ(M) {
+		max-width: 768px;
+	}
+	@include MQ(L) {
+		max-width: 1024px;
+	}
+}
+
+.entry-meta {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	font-size:14px;
+	margin-top: 18px;
+	margin-bottom: 32px;
+}
+
+.entry-content {
+	width: 90%;
+	margin: 0 auto;
+	tab-size: 8;
+	@include MQ(M) {
+		width: 100%;
+		max-width: 768px;
+		column-count: 2;
+		column-gap: 42px;
+	  page-break-inside: avoid;
+		break-inside: avoid;
+	}
+	@include MQ(L) {
+		max-width: 1024px;
+		column-count: 3;
+		column-gap: 42px;
+	  page-break-inside: avoid;
+		break-inside: avoid;
+	}
+}
+
+.entry-content p {
+	margin-top: 0;
+	margin-bottom: 24px;
+}
+
+footer {
+	margin-top: 39px;
+	color: #757575;
+	max-width: 90%;
+	text-align:center;
+	@include MQ(S) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 600px;
+	}
+}

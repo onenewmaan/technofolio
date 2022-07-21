@@ -54,7 +54,7 @@ const Date = styled.span`
 padding: 0.5rem 0;
 `
 //<Box target="_blank" to={{pathname: link}}>
-const ArchitectureCard = (props) => {
+const ProjectsCard = (props) => {
     const {name, tags, date, imgSrc, link } = props.blog;
     return (
         <Box target="_blank" to={{pathname: link}}>
@@ -76,4 +76,4 @@ const ArchitectureCard = (props) => {
     )
 }
 
-export default ArchitectureCard
+export default ProjectsCard

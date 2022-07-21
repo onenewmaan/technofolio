@@ -1,107 +1,64 @@
-import React, { useEffect, useRef } from 'react'
-import styled, { ThemeProvider } from 'styled-components'
-import {darkTheme} from './Themes';
-import {motion} from 'framer-motion';
+import React from "react";
+import styled from "styled-components";
+import LogoComponent from "../subComponents/LogoComponent";
+import ProjectsCard from "./ProjectsCard";
+import { Posts } from '../data/ProjectsData'
 
-import LogoComponent from '../subComponents/LogoComponent';
-import SocialIcons from '../subComponents/SocialIcons';
-
-import { Work } from "../data/WorkData";
-import Card from '../subComponents/Card';
-import { YinYang } from './AllSvgs';
-
-const Box = styled.div`
-background-color: ${props => props.theme.body};
-height:400vh;
+const ProjectsPage = styled.div`
+background-color: white;
+width: 100vw;
+height: 110vh;
 position: relative;
 display: flex;
+justify-content: space-evenly;
 align-items: center;
 `
-
-const Main = styled(motion.ul)`
-position: fixed;
-top: 12rem;
-left:calc(10rem + 15vw);
-height: 40vh;
+const Main = styled.div`
+padding: 2rem;
+top: 150px;
+width: 99vw;
+height: 800px;
+z-index: 3;
+line-height: 1.5;
+cursor: pointer;
+font-family: candara;
 display: flex;
-color:white;
-`
-const Rotate = styled.span`
-display:block;
-position: fixed;
-right:1rem;
-bottom: 1rem;
-width: 80px;
-height: 80px;
-z-index:1;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
 `
 
 
-// Framer-motion Configuration
-const container = {
+const Center = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 1rem;
+`
+const Grid = styled.div`
+display: grid;
+grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
+grid-gap: calc(1rem + 0vw);
+height: 15rem;
+`
 
-  hidden: {opacity:0},
-  show: {
-    opacity:1,
-
-    transition:{
-      staggerChildren: 0.5,
-      duration: 0.5,
-    }
-  }
-
-}
-
-const DesignPage = () => {
-
-    const ref = useRef(null);
-    const yinyang = useRef(null);
-
-
-
-    useEffect(() => {
-        let element = ref.current;
-       
-        
-        const rotate = () => {
-         
-         element.style.transform = `translateX(${-window.pageYOffset}px)`
-      
-         
-          return (yinyang.current.style.transform =
-            'rotate(' + -window.pageYOffset + 'deg)')
-        }
-    
-        window.addEventListener('scroll', rotate)
-        return () => {
-          window.removeEventListener('scroll', rotate);
-          
-        }
-      }, [])
-
-
+const Projects = () => {
     return (
-        <ThemeProvider theme={darkTheme}>
-        <Box>
-
-        <LogoComponent theme='dark'/>
-        <SocialIcons theme='dark'/>
-
-        <Main ref={ref}   variants={container} initial='hidden' animate='show'  >
-            {
-                Work.map( d => 
-                <Card key={d.id} data={d} />
-                )
-            }
-        </Main>
-        <Rotate ref={yinyang}>
-            <YinYang width={80} height={80} fill={darkTheme.text} />
-        </Rotate>
-        </Box>
-
-        </ThemeProvider>
-        
+            <ProjectsPage>
+                <LogoComponent theme='light' />
+                <Main>
+                <Center>
+                    <Grid>
+                        {
+                            Posts.map(blog => {
+                                return <ProjectsCard key={blog.id} blog={blog} />
+                            })
+                        }
+                    </Grid>
+                </Center>
+                </Main>
+            </ProjectsPage>
     )
 }
 
-export default DesignPage
+export default Projects

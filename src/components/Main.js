@@ -42,7 +42,7 @@ color: ${props => props.click ? props.theme.body : props.theme.text};
 text-decoration: none;
 z-index: 1;
 `
-const PHOTOGRAPHY = styled(NavLink)`
+const PICTURES = styled(NavLink)`
 color: ${props => props.theme.text};
 text-decoration: none;
 z-index: 1;
@@ -74,30 +74,14 @@ const Main = () => {
                         <div class="lens-flare"></div>
                         <div class="info">
                             <header>
-                                <h3>AGGIE PICTURES</h3>
                                 <p>Presents</p>
                             </header>
-                            <main>
-                                <h3><i>SUMMER SESSIONS</i></h3>
-                            </main>
-                            <section id="date">
-                                <div class="circle-item">1</div>
-                                <div class="circle-item">JULY</div>
-                                <div class="circle-item">2022</div>
-                            </section>
-                            <section id="talent">
-                                <div class="dj-title">Featuring</div>
-                                <ul class="dj-list">
-                                    <li>1:1 //</li>
-                                    <li> Portraits // </li>
-                                    <li>Family</li>
-                                </ul>
+                            <section id="venue">
+                                <h3>A <i>COLLECTION</i> OF</h3>
                             </section>
                             <footer>
                                 <div class="venue">
-                                    <h3>BOOK YOUR SPOT</h3><br />
-                                    <h3>Alberta // British Columbia</h3><br />
-                                    <h3><small>aggie.pictures@pm.me</small></h3>
+                                    <h3>projects, designs & notes.</h3><br />
                                 </div>
                             </footer>
                         </div>
@@ -114,21 +98,21 @@ const Main = () => {
                         </motion.h3>
                     </PROFILE>
                 <BottomBar>
-                    <ABOUT to="/architecture">
+                    <ABOUT to="/projects">
                         <motion.h3 whileHover={{scale: 1.1}}whileTap={{scale: 0.9}}
                         style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}>
-                                architecture
+                                projects
                         </motion.h3>
                     </ABOUT>
-                    <PHOTOGRAPHY to="/photography">
+                    <PICTURES to={{pathname: 'https://outerspaces.io'}} target="_blank">
                         <motion.h3
                         whileHover={{scale: 1.1}}
                         whileTap={{scale: 0.9}}
                         style={{ color: 'black', textDecoration:'none', fontSize: '1em' }}
                         >
-                            photography 
+                            spaces 
                         </motion.h3>
-                    </PHOTOGRAPHY>
+                    </PICTURES>
                 </BottomBar>
             </Container>
         </MainContainer>
